@@ -5,8 +5,9 @@
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
     <meta name="keywords" content="大队长的博客">
-    <meta name="description" content="shell命令系列–数据统计
-1.目的从使用场景上，介绍常用shell命令，进行数据统计的用法，命令偏小白，熟悉Linux环境的同学可以进行跳过或者快速看一遍即可，以下命令中只简单描述数据分析过程中，常用命令使用方法，而不会对命令本身做细致">
+    <meta name="description" content="有趣好用的软件来自知乎链接：https://www.zhihu.com/question/22919326/answer/688701981此知乎文章已收藏，可上知乎查看
+
+">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -389,7 +390,7 @@
             <div class="post-info">
                 <div class="post-date info-break-policy">
                     <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2019-07-23
+                    2019-07-25
                 </div>
 
                 
@@ -405,135 +406,8 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="shell命令系列–数据统计"><a href="#shell命令系列–数据统计" class="headerlink" title="shell命令系列–数据统计"></a>shell命令系列–数据统计</h1><p><a name="4hNGD"></a></p>
-<h1 id="1-目的"><a href="#1-目的" class="headerlink" title="1.目的"></a>1.目的</h1><p>从使用场景上，介绍常用shell命令，进行数据统计的用法，命令偏小白，熟悉Linux环境的同学可以进行跳过或者快速看一遍即可，以下命令中只简单描述数据分析过程中，常用命令使用方法，而不会对命令本身做细致解释。shell命令用法很多，有的会很复杂，难以解释清楚，需要用到时候，可Google寻找解决</p>
-<p><a name="XyMfF"></a></p>
-<h1 id="2-学习环境"><a href="#2-学习环境" class="headerlink" title="2.学习环境"></a>2.学习环境</h1><p>Ubuntu 16.04LTS</p>
-<p><a name="2QWsw"></a></p>
-<h1 id="3-练习数据"><a href="#3-练习数据" class="headerlink" title="3.练习数据"></a>3.练习数据</h1><p>可在本地桌面创建练习数据，如本人在路径： <code>cd /home/litiangu/Desktop/</code> <br><img src="https://cdn.nlark.com/yuque/0/2019/png/298714/1562903015523-ce63e110-9eff-4b08-8c73-d8ffa857f9c8.png#align=left&display=inline&height=20&name=image.png&originHeight=20&originWidth=459&size=5688&status=done&width=459" alt="image.png"> <br><img src="https://cdn.nlark.com/yuque/0/2019/png/298714/1562903052110-5eef7303-2dba-41db-8c04-b34c3298aa48.png#align=left&display=inline&height=22&name=image.png&originHeight=22&originWidth=233&size=3941&status=done&width=233" alt="image.png"></p>
-<p>进入到桌面后，创建一个文本数据，里面内容如下，共13行</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">学校,sex,age,city</span><br><span class="line">北大,男,20,北京</span><br><span class="line">北大,男,21,北京</span><br><span class="line">北大,男,20,北京</span><br><span class="line">北大,男,21,北京</span><br><span class="line">北大,男,20,北京</span><br><span class="line">南大,男,21,北京</span><br><span class="line">南大,女,20,上海</span><br><span class="line">南大,女,21,上海</span><br><span class="line">南大,女,20,上海</span><br><span class="line">南大,女,21,上海</span><br><span class="line">南大,女,20,上海</span><br><span class="line">南大,女,21,上海</span><br></pre></td></tr></table></figure>
-
-<p>命令如下<br><code>touch userprofile.csv</code>             #创建文本<br><code>vim userprofile.csv</code>             #编辑内容<br><code>cat userprofile.csv</code>             #查看整个文件内容</p>
-<p><img src="https://cdn.nlark.com/yuque/0/2019/png/298714/1562903294951-009737b5-8872-4ea7-a598-396ee22b4139.png#align=left&display=inline&height=288&name=image.png&originHeight=288&originWidth=525&size=23645&status=done&width=525" alt="image.png"></p>
-<p>创建好练习数据后，进入到统计场景</p>
-<p><a name="kyLM6"></a></p>
-<h1 id="4-统计场景"><a href="#4-统计场景" class="headerlink" title="4.统计场景"></a>4.统计场景</h1><p><a name="PDDB1"></a></p>
-<h2 id="4-1-行数"><a href="#4-1-行数" class="headerlink" title="4.1 行数"></a>4.1 行数</h2><ul>
-<li>命令模板： <code>wc -l 文件位置</code> </li>
-<li>代码样例<blockquote>
-<p><strong>wc -l /home/…/userproflie.csv</strong></p>
-<br>
-#如果当前路径为创建文件所在，那么可以省去绝对路径
-#为简单所见，省去绝对路径，如下：
-wc -l userproflie.csv
-</blockquote>
-</li>
-</ul>
-<ul>
-<li>执行效果：</li>
-</ul>
-<p>该文件共13行</p>
-<p><img src="https://cdn.nlark.com/yuque/0/2019/png/298714/1562904068757-00ea6335-a90d-4716-aaf4-371e7d182b60.png#align=left&display=inline&height=35&name=image.png&originHeight=35&originWidth=476&size=7138&status=done&width=476" alt="image.png"></p>
-<p><a name="p6cIq"></a></p>
-<h2 id="4-2-过滤关键词"><a href="#4-2-过滤关键词" class="headerlink" title="4.2 过滤关键词"></a>4.2 过滤关键词</h2><ul>
-<li><p>命令模板： <code>grep &#39;过滤词‘ 文件位置</code> </p>
-</li>
-<li><p>代码样例</p>
-<blockquote>
-<p>grep ‘北京’ userproflie.csv</p>
-</blockquote>
-</li>
-<li><p>执行效果：</p>
-</li>
-</ul>
-<p>过滤出含有‘北京’的行<br><br><br><img src="https://cdn.nlark.com/yuque/0/2019/png/298714/1562904397972-a06e3a79-a70d-48a6-9fe4-19513eeea628.png#align=left&display=inline&height=117&name=image.png&originHeight=117&originWidth=493&size=14662&status=done&width=493" alt="image.png"></p>
-<ul>
-<li>还可过滤其他，如下图</li>
-</ul>
-<p><img src="https://cdn.nlark.com/yuque/0/2019/png/298714/1562904454368-2705f48c-676c-47a9-b811-20045794457d.png#align=left&display=inline&height=245&name=image.png&originHeight=245&originWidth=539&size=27779&status=done&width=539" alt="image.png"></p>
-<p><a name="VAHuf"></a></p>
-<h2 id="4-3-选取某列"><a href="#4-3-选取某列" class="headerlink" title="4.3 选取某列"></a>4.3 选取某列</h2><ul>
-<li><p>命令模板： <code>cut -d&#39;分隔符‘ -fm,n 文件位置</code> </p>
-</li>
-<li><p>代码样例</p>
-<blockquote>
-<p><strong>cut -d’,’ -f1,4 userprofile.csv</strong></p>
-<br>
-#分隔符是逗号","分割成4列
-#m,n为选取列，如选取1 4两列
-</blockquote>
-</li>
-<li><p>执行效果：</p>
-</li>
-</ul>
-<p>过滤出含有‘北京’的行</p>
-<p><img src="https://cdn.nlark.com/yuque/0/2019/png/298714/1562904749927-eeccbaee-5beb-400f-ac9c-26fc592b7a0e.png#align=left&display=inline&height=240&name=image.png&originHeight=240&originWidth=593&size=16591&status=done&width=593" alt="image.png"></p>
-<ul>
-<li>还可选取其他列，如下图</li>
-</ul>
-<p><img src="https://cdn.nlark.com/yuque/0/2019/png/298714/1562904787242-d6e1c58b-130b-4764-883a-3c4d6cf274d6.png#align=left&display=inline&height=476&name=image.png&originHeight=476&originWidth=555&size=35162&status=done&width=555" alt="image.png"></p>
-<p><a name="SStq3"></a></p>
-<h2 id="4-4-按某列进行排序"><a href="#4-4-按某列进行排序" class="headerlink" title="4.4 按某列进行排序"></a>4.4 按某列进行排序</h2><ul>
-<li><p>命令模板： <code>sort -t&#39;分隔符&#39; -knr 文件位置</code> </p>
-</li>
-<li><p>代码样例</p>
-<blockquote>
-<p>*<em>sort -t’,’ -k3r userprofile.csv *</em></p>
-<p>#分隔符是逗号”,”分割成4列<br>#n为选取列，如选取第3列<br>#r为倒排，降序排列，没有r就是升序排列</p>
-</blockquote>
-</li>
-<li><p>执行效果：</p>
-</li>
-</ul>
-<p>第3列降序排列,按照年龄从小到大排列</p>
-<p><img src="https://cdn.nlark.com/yuque/0/2019/png/298714/1562906018735-a7f290fa-f1b6-423e-a2db-74e2629b5f60.png#align=left&display=inline&height=243&name=image.png&originHeight=243&originWidth=525&size=24776&status=done&width=525" alt="image.png"></p>
-<ul>
-<li>还可选取其他列，如下图</li>
-</ul>
-<p><img src="https://cdn.nlark.com/yuque/0/2019/png/298714/1562906069395-ea790876-7336-4820-9ef5-db074982a67a.png#align=left&display=inline&height=482&name=image.png&originHeight=482&originWidth=567&size=42873&status=done&width=567" alt="image.png"></p>
-<p><a name="AGao4"></a></p>
-<h2 id="4-5-去重"><a href="#4-5-去重" class="headerlink" title="4.5 去重"></a>4.5 去重</h2><ul>
-<li>命令模块： <code>sort -u 文件路径</code> </li>
-<li>代码样例：</li>
-</ul>
-<p><code>sort -u userprofile.csv</code> </p>
-<ul>
-<li>执行效果：</li>
-</ul>
-<p><img src="https://cdn.nlark.com/yuque/0/2019/png/298714/1562906281547-b8248c95-527e-44f0-8032-fb426a1e29e3.png#align=left&display=inline&height=124&name=image.png&originHeight=124&originWidth=479&size=17083&status=done&width=479" alt="image.png"></p>
-<p><a name="ItPPS"></a></p>
-<h2 id="4-6-场景组合"><a href="#4-6-场景组合" class="headerlink" title="4.6 场景组合"></a>4.6 场景组合</h2><blockquote>
-<p>某文件行去重后行数</p>
-</blockquote>
-<ul>
-<li><p>代码样例</p>
-<blockquote>
-<p><strong>sort -u userproflie.csv | wc -l</strong></p>
-<br>
-#    |    为管道符号，可以简单理解为把上一条命令执行后的结果输入到下一条命令
-</blockquote>
-</li>
-<li><p>执行效果</p>
-</li>
-</ul>
-<p><img src="https://cdn.nlark.com/yuque/0/2019/png/298714/1562906571864-bf1abaf4-8dfe-444c-8a9d-dab1569de0ca.png#align=left&display=inline&height=38&name=image.png&originHeight=38&originWidth=540&size=7505&status=done&width=540" alt="image.png"></p>
-<blockquote>
-<p>文件按某列去重后排序</p>
-</blockquote>
-<ul>
-<li><p>代码样例</p>
-<blockquote>
-<p><strong>cut -d’,’ -f3,4 userprofile.csv | sort -u | sort -t’,’ -k1r</strong></p>
-<br>
-#    |    为管道符号，可以简单理解为把上一条命令执行后的结果输入到下一条命令
-#选取3,4列，去重后，按照年龄倒叙排列
-</blockquote>
-</li>
-<li><p>执行效果</p>
-</li>
-</ul>
-<p><img src="https://cdn.nlark.com/yuque/0/2019/png/298714/1562906734981-e731c11f-1fb5-488f-a0cc-faf446f7daa9.png#align=left&display=inline&height=102&name=image.png&originHeight=102&originWidth=798&size=15597&status=done&width=798" alt="image.png"></p>
+                <h1 id="有趣好用的软件来自知乎"><a href="#有趣好用的软件来自知乎" class="headerlink" title="有趣好用的软件来自知乎"></a>有趣好用的软件来自知乎</h1><p>链接：<a href="https://www.zhihu.com/question/22919326/answer/688701981" target="_blank" rel="noopener">https://www.zhihu.com/question/22919326/answer/688701981</a><br>此知乎文章已收藏，可上知乎查看</p>
+<p><img src="https://cdn.nlark.com/yuque/0/2019/png/298714/1558513001522-c89dfda2-ee25-43eb-a63f-ad64e42abf73.png#align=left&display=inline&height=444&name=image.png&originHeight=998&originWidth=1666&size=335761&status=done&width=740.4444444444445" alt="image.png"></p>
 
             </div>
             <hr/>
@@ -694,7 +568,7 @@ wc -l userproflie.csv
                   property="dct:title" rel="dct:type">
                     《》
                 </span> 由
-            <a xmlns:cc="http://creativecommons.org/ns#" href="/2019/07/23/shell命令系列--数据统计/" property="cc:attributionName"
+            <a xmlns:cc="http://creativecommons.org/ns#" href="/2019/07/25/有趣好用的软件来自知乎/" property="cc:attributionName"
                rel="cc:attributionURL">
                 不加冰不加糖
             </a> 采用
@@ -738,7 +612,7 @@ wc -l userproflie.csv
             <div class="article-badge left-badge text-color">
                 <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2019/07/25/Notion/">
+                <a href="/2019/07/25/Feedly/">
                     <div class="card-image">
                         
                         
@@ -750,10 +624,10 @@ wc -l userproflie.csv
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            Notion链接：https://www.notion.so/
-少数派介绍Notion 链接：https://sspai.com/post/39694
+                            Feedly链接：https://feedly.com/i/welcome
+Feedly是一款第三方RSS阅读器
 
-Notion 自称是一款「将笔记、知识库和任务管理无缝整合的协作平台」。它具有无限的层
+
                         
                     </div>
                     <div class="publish-info">
@@ -775,10 +649,10 @@ Notion 自称是一款「将笔记、知识库和任务管理无缝整合的协�
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                本篇&nbsp;<i class="fa fa-dot-circle-o"></i>
+                下一篇&nbsp;<i class="fa fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2019/07/23/shell命令系列--数据统计/">
+                <a href="/2019/07/25/Wix/">
                     <div class="card-image">
                         
                         
@@ -790,13 +664,15 @@ Notion 自称是一款「将笔记、知识库和任务管理无缝整合的协�
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            shell命令系列–数据统计
-1.目的从使用场景上，介绍常用shell命令，进行数据统计的用法，命令偏小白，熟悉Linux环境的同学可以进行跳过或者快速看一遍即可，以下命令中只简单描述数据分析过程中，常用命令使用方法，而不会对命令本身做细致
+                            Wix链接：https://zh.wix.com/
+利用Wix.com 製作免費網站與網頁。選一個絕美的免費網頁與網站範本,並用 Wix 網站幫手自訂一切,完全不用編碼技能。立即製作個人的免費網頁與網站吧!
+
+
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-07-23
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-07-25
                             </span>
                         <span class="publish-author">
                             
@@ -806,7 +682,6 @@ Notion 自称是一款「将笔记、知识库和任务管理无缝整合的协�
                         </span>
                     </div>
                 </div>
-
                 
             </div>
         </div>
