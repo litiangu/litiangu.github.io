@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title><![CDATA[TiddlyWiki]]></title>
+    <url>%2F2019%2F07%2F25%2FTiddlyWiki%2F</url>
+    <content type="text"><![CDATA[TiddlyWiki 搭建个人Wiki，博客？ 链接：http://www.tiddlywiki.cn/]]></content>
+      <categories>
+        <category>好用不火的软件</category>
+      </categories>
+      <tags>
+        <tag>shell</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Notion]]></title>
+    <url>%2F2019%2F07%2F25%2FNotion%2F</url>
+    <content type="text"><![CDATA[Notion Notion 自称是一款「将笔记、知识库和任务管理无缝整合的协作平台」。它具有无限的层级和相互链接的组织弹性，给笔记间的关系提供了足够自由的组织方式；它排版灵活，能够把笔记里的内容按块（Block）进行组织和拖拽，甚至可以做出 Trello 看板进行项目管理；它的内容类型丰富，可以嵌入图片、网页、文档甚至视频，几乎无所不能 链接：https://www.notion.so/ 少数派介绍Notion 链接：https://sspai.com/post/39694]]></content>
+      <categories>
+        <category>好用不火的软件</category>
+      </categories>
+      <tags>
+        <tag>shell</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Feedly]]></title>
+    <url>%2F2019%2F07%2F25%2FFeedly%2F</url>
+    <content type="text"><![CDATA[Feedly Feedly是一款第三方RSS阅读器 链接：https://feedly.com/i/welcome]]></content>
+      <categories>
+        <category>好用不火的软件</category>
+      </categories>
+      <tags>
+        <tag>shell</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Wix]]></title>
+    <url>%2F2019%2F07%2F25%2FWix%2F</url>
+    <content type="text"><![CDATA[Wix 利用Wix.com 製作免費網站與網頁。選一個絕美的免費網頁與網站範本,並用 Wix 網站幫手自訂一切,完全不用編碼技能。立即製作個人的免費網頁與網站吧! 链接：https://zh.wix.com/]]></content>
+      <categories>
+        <category>好用不火的软件</category>
+      </categories>
+      <tags>
+        <tag>shell</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[shell命令系列]]></title>
+    <url>%2F2019%2F07%2F23%2Fshell%E5%91%BD%E4%BB%A4%E7%B3%BB%E5%88%97--%E6%95%B0%E6%8D%AE%E7%BB%9F%E8%AE%A1%2F</url>
+    <content type="text"><![CDATA[shell命令系列–数据统计 1.目的从使用场景上，介绍常用shell命令，进行数据统计的用法，命令偏小白，熟悉Linux环境的同学可以进行跳过或者快速看一遍即可，以下命令中只简单描述数据分析过程中，常用命令使用方法，而不会对命令本身做细致解释。shell命令用法很多，有的会很复杂，难以解释清楚，需要用到时候，可Google寻找解决 2.学习环境Ubuntu 16.04LTS 3.练习数据可在本地桌面创建练习数据，如本人在路径： cd /home/litiangu/Desktop/ 进入到桌面后，创建一个文本数据，里面内容如下，共13行 12345678910111213学校,sex,age,city北大,男,20,北京北大,男,21,北京北大,男,20,北京北大,男,21,北京北大,男,20,北京南大,男,21,北京南大,女,20,上海南大,女,21,上海南大,女,20,上海南大,女,21,上海南大,女,20,上海南大,女,21,上海 命令如下touch userprofile.csv #创建文本vim userprofile.csv #编辑内容cat userprofile.csv #查看整个文件内容 创建好练习数据后，进入到统计场景 4.统计场景 4.1 行数 命令模板： wc -l 文件位置 代码样例 wc -l /home/…/userproflie.csv #如果当前路径为创建文件所在，那么可以省去绝对路径 #为简单所见，省去绝对路径，如下： wc -l userproflie.csv 执行效果： 该文件共13行 4.2 过滤关键词 命令模板： grep &#39;过滤词‘ 文件位置 代码样例 grep ‘北京’ userproflie.csv 执行效果： 过滤出含有‘北京’的行 还可过滤其他，如下图 4.3 选取某列 命令模板： cut -d&#39;分隔符‘ -fm,n 文件位置 代码样例 cut -d’,’ -f1,4 userprofile.csv #分隔符是逗号","分割成4列 #m,n为选取列，如选取1 4两列 执行效果： 过滤出含有‘北京’的行 还可选取其他列，如下图 4.4 按某列进行排序 命令模板： sort -t&#39;分隔符&#39; -knr 文件位置 代码样例 *sort -t’,’ -k3r userprofile.csv * #分隔符是逗号”,”分割成4列#n为选取列，如选取第3列#r为倒排，降序排列，没有r就是升序排列 执行效果： 第3列降序排列,按照年龄从小到大排列 还可选取其他列，如下图 4.5 去重 命令模块： sort -u 文件路径 代码样例： sort -u userprofile.csv 执行效果： 4.6 场景组合 某文件行去重后行数 代码样例 sort -u userproflie.csv | wc -l # | 为管道符号，可以简单理解为把上一条命令执行后的结果输入到下一条命令 执行效果 文件按某列去重后排序 代码样例 cut -d’,’ -f3,4 userprofile.csv | sort -u | sort -t’,’ -k1r # | 为管道符号，可以简单理解为把上一条命令执行后的结果输入到下一条命令 #选取3,4列，去重后，按照年龄倒叙排列 执行效果]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
+      <tags>
+        <tag>shell</tag>
+      </tags>
+  </entry>
+</search>
