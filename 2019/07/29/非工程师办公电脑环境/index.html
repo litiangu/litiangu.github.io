@@ -1,0 +1,1401 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.2.0">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=7.2.0">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=7.2.0">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=7.2.0" color="#222">
+
+
+
+
+
+
+<link rel="stylesheet" href="/css/main.css?v=7.2.0">
+
+
+
+
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.7.0">
+
+
+
+
+
+
+
+
+<script id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '7.2.0',
+    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
+    copycode: {"enable":false,"show_result":false,"style":null},
+    fancybox: false,
+    mediumzoom: false,
+    lazyload: false,
+    pangu: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    },
+    translation: {
+      copy_button: '复制',
+      copy_success: '复制成功',
+      copy_failure: '复制失败'
+    }
+  };
+</script>
+
+  <meta name="description" content="非工程师办公电脑环境">
+<meta name="keywords" content="运维,电脑办公环境搭建">
+<meta property="og:type" content="article">
+<meta property="og:title" content="非工程师办公电脑环境">
+<meta property="og:url" content="http://yoursite.com/2019/07/29/非工程师办公电脑环境/index.html">
+<meta property="og:site_name" content="大队长的博客">
+<meta property="og:description" content="非工程师办公电脑环境">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2019/png/298714/1557468368369-d8980a39-e92b-4ed1-9569-38e39a580e06.png#align=left&display=inline&height=341&name=image.png&originHeight=768&originWidth=1363&size=121594&status=done&width=605.7777777777778">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2019/png/298714/1557468441598-390538f4-93cf-4807-a43b-34e902556717.png#align=left&display=inline&height=392&name=image.png&originHeight=882&originWidth=839&size=84665&status=done&width=372.8888888888889">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2019/png/298714/1557468534482-b3d5dedc-1f8b-4de8-b0ac-0671491fb998.png#align=left&display=inline&height=627&name=image.png&originHeight=1410&originWidth=1079&size=151596&status=done&width=479.55555555555554">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2019/png/298714/1557468767253-62ed4ff7-d4b7-492e-9f61-16d4a4de0c5d.png#align=left&display=inline&height=625&name=image.png&originHeight=1406&originWidth=1085&size=160099&status=done&width=482.22222222222223">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2019/png/298714/1557468843805-9e87c1fd-09eb-4be7-bd59-2fe45700be98.png#align=left&display=inline&height=497&name=image.png&originHeight=1843&originWidth=1826&size=1695519&status=done&width=492">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2019/png/298714/1557468950710-3dbf97ea-c56a-45b4-88f7-00bbaf228b1d.png#align=left&display=inline&height=492&name=image.png&originHeight=1107&originWidth=749&size=113486&status=done&width=332.8888888888889">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2019/png/298714/1557469131595-6cc411b2-8ab0-4410-896a-4d2ec26178b3.png#align=left&display=inline&height=526&name=image.png&originHeight=1511&originWidth=1679&size=161370&status=done&width=585">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2019/png/298714/1557469290316-8b51cb09-d52d-4ae6-9ea0-60cfdcb97747.png#align=left&display=inline&height=560&name=image.png&originHeight=1261&originWidth=1635&size=235069&status=done&width=726.6666666666666">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2019/png/298714/1557469353428-35bf2dc0-660d-41de-a0bf-d9da24dedbdc.png#align=left&display=inline&height=476&name=image.png&originHeight=1072&originWidth=1147&size=117171&status=done&width=509.77777777777777">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2019/png/298714/1557469708163-71e67cbc-a96d-4c18-95c3-d5b55376009e.png#align=left&display=inline&height=560&name=image.png&originHeight=1261&originWidth=1528&size=251377&status=done&width=679.1111111111111">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2019/png/298714/1557469952160-b53be745-d4e0-41d3-a0df-e9314942e480.png#align=left&display=inline&height=904&name=image.png&originHeight=2034&originWidth=2324&size=289304&status=done&width=1032.888888888889">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2019/png/298714/1557470013278-544930cc-3846-4c8a-b0e9-7089da112eb2.png#align=left&display=inline&height=914&name=image.png&originHeight=2057&originWidth=2334&size=358488&status=done&width=1037.3333333333333">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2019/png/298714/1557470041867-a430afa7-1a88-40b8-9232-71dec93235c3.png#align=left&display=inline&height=912&name=image.png&originHeight=2051&originWidth=2336&size=346503&status=done&width=1038.2222222222222">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2019/png/298714/1557470093794-4a75cf71-66ac-46c0-866f-60616d15b416.png#align=left&display=inline&height=688&name=image.png&originHeight=1548&originWidth=1968&size=138994&status=done&width=874.6666666666666">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2019/png/298714/1557470175106-417829c0-6aeb-4faa-bb31-54eb2241bcdc.png#align=left&display=inline&height=569&name=image.png&originHeight=1281&originWidth=948&size=113780&status=done&width=421.3333333333333">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2019/png/298714/1557467832788-476c8f06-777d-4aae-8da4-1329a2f3713f.png#align=left&display=inline&height=635&name=image.png&originHeight=1429&originWidth=911&size=82850&status=done&width=404.8888888888889">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2019/png/298714/1557467913075-bffd45ee-0aec-4b24-9c34-9c68c4f01df7.png#align=left&display=inline&height=665&name=image.png&originHeight=1496&originWidth=2869&size=300702&status=done&width=1275.111111111111">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2019/png/298714/1557467972714-7f0c324a-304e-4906-a4e7-a609f81badb5.png#align=left&display=inline&height=538&name=image.png&originHeight=1210&originWidth=954&size=103248&status=done&width=424">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2019/png/298714/1557468064302-1c2f4c68-3ca8-449a-9247-1acf36ce30fa.png#align=left&display=inline&height=538&name=image.png&originHeight=1210&originWidth=954&size=99695&status=done&width=424">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2019/png/298714/1557470300467-afc02c63-90f3-4e75-b903-ebededbb3e11.png#align=left&display=inline&height=841&name=image.png&originHeight=1893&originWidth=2564&size=1271635&status=done&width=1139.5555555555557">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2019/png/298714/1557470384379-c9ab0301-24b4-4ea1-9daf-9c79d3f1de4b.png#align=left&display=inline&height=756&name=image.png&originHeight=1702&originWidth=2304&size=780203&status=done&width=1024">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2019/png/298714/1557470761852-f5e19fa2-8c0d-4457-8e91-5c29e5dbe52a.png#align=left&display=inline&height=638&name=image.png&originHeight=1435&originWidth=792&size=47091&status=done&width=352">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2019/png/298714/1557470697582-1535cf54-21b3-4af2-ad35-bca2857a31e3.png#align=left&display=inline&height=486&name=image.png&originHeight=1094&originWidth=1025&size=78808&status=done&width=455.55555555555554">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2019/png/298714/1557470806353-ca18c0b0-c6b2-4a94-b839-7196ede825c7.png#align=left&display=inline&height=486&name=image.png&originHeight=1093&originWidth=1032&size=62314&status=done&width=458.6666666666667">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2019/png/298714/1557470995301-a0f5e5c7-235b-4177-bb8e-072c96d9c5c9.png#align=left&display=inline&height=429&name=image.png&originHeight=966&originWidth=1002&size=52817&status=done&width=445.3333333333333">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2019/png/298714/1557471067393-1bc716d4-a089-4013-9180-64d6c2f300d1.png#align=left&display=inline&height=823&name=image.png&originHeight=1852&originWidth=3019&size=1968777&status=done&width=1341.7777777777778">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2019/png/298714/1557048919959-c830af8f-fbd5-472f-add8-ba7059b23909.png#align=left&display=inline&height=666&name=image.png&originHeight=1498&originWidth=1811&size=142778&status=done&width=804.8888888888889">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2019/png/298714/1557467576361-ffff213b-72d5-47dc-bf25-7385ee4d1fc9.png#align=left&display=inline&height=701&name=image.png&originHeight=1577&originWidth=2389&size=440369&status=done&width=1061.7777777777778">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2019/png/298714/1557474379588-2debeed0-b9b7-444c-a57b-5fbc9b1e33d9.png#align=left&display=inline&height=640&name=image.png&originHeight=1440&originWidth=1531&size=1238245&status=done&width=680.4444444444445">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2019/png/298714/1557474440731-a64a3f13-d2ea-468b-89cd-f666a9d6c76f.png#align=left&display=inline&height=572&name=image.png&originHeight=1287&originWidth=1458&size=1093626&status=done&width=648">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2019/png/298714/1557474730332-8e918ecd-5945-4f89-bdb3-d79eedbd5acf.png#align=left&display=inline&height=691&name=image.png&originHeight=1555&originWidth=2216&size=277129&status=done&width=984.8888888888889">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2019/png/298714/1557474801796-3431f2cd-8af6-4dcc-91bd-b7943a9070cb.png#align=left&display=inline&height=692&name=image.png&originHeight=1557&originWidth=2219&size=238376&status=done&width=986.2222222222222">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2019/png/298714/1557467513086-d266960a-8fed-4766-87a7-71789e127fb0.png#align=left&display=inline&height=841&name=image.png&originHeight=1893&originWidth=2564&size=1093254&status=done&width=1139.5555555555557">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2019/png/298714/1557468147900-f4114999-b9e4-48b7-ad81-7fc384f085f4.png#align=left&display=inline&height=841&name=image.png&originHeight=1893&originWidth=2564&size=247362&status=done&width=1139.5555555555557">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2019/png/298714/1557474891169-9188adc4-ee3d-4f9f-8012-c49e06099278.png#align=left&display=inline&height=691&name=image.png&originHeight=1555&originWidth=2221&size=186734&status=done&width=987.1111111111111">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2019/png/298714/1557475832067-ed85af71-fb3e-4f27-8d06-6f0a44fd9e67.png#align=left&display=inline&height=293&name=image.png&originHeight=659&originWidth=1142&size=105095&status=done&width=507.55555555555554">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2019/png/298714/1557475886700-fb01c709-4709-426e-839d-bc306a9a1af3.png#align=left&display=inline&height=552&name=image.png&originHeight=1241&originWidth=1007&size=160602&status=done&width=447.55555555555554">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2019/png/298714/1557468207470-4a8f1350-01e6-458b-b7c3-e839cb415949.png#align=left&display=inline&height=841&name=image.png&originHeight=1893&originWidth=2564&size=1630371&status=done&width=1139.5555555555557">
+<meta property="og:updated_time" content="2019-07-29T09:37:31.114Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="非工程师办公电脑环境">
+<meta name="twitter:description" content="非工程师办公电脑环境">
+<meta name="twitter:image" content="https://cdn.nlark.com/yuque/0/2019/png/298714/1557468368369-d8980a39-e92b-4ed1-9569-38e39a580e06.png#align=left&display=inline&height=341&name=image.png&originHeight=768&originWidth=1363&size=121594&status=done&width=605.7777777777778">
+
+
+
+
+
+  
+  
+  <link rel="canonical" href="http://yoursite.com/2019/07/29/非工程师办公电脑环境/">
+
+
+
+<script id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  
+  <title>非工程师办公电脑环境 | 大队长的博客</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">大队长的博客</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+      
+        <p class="site-subtitle">学习~摸鱼ing~</p>
+      
+    
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+
+    
+    
+      
+    
+
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+
+    
+    
+      
+    
+
+    
+
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+
+    
+    
+      
+    
+
+    
+
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+
+    
+    
+      
+    
+
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-about">
+
+    
+    
+      
+    
+
+    
+
+    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>关于</a>
+
+  </li>
+
+      
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>搜索</a>
+        </li>
+      
+    </ul>
+  
+
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+            
+
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/07/29/非工程师办公电脑环境/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="不加冰不加糖">
+      <meta itemprop="description" content="啦~啦~啦">
+      <meta itemprop="image" content="/images/C.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="大队长的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">非工程师办公电脑环境
+
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+
+          
+          
+          
+
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-07-29 17:35:31 / 修改时间：17:37:31" itemprop="dateCreated datePublished" datetime="2019-07-29T17:35:31+08:00">2019-07-29</time>
+            </span>
+          
+
+          
+            
+
+            
+          
+
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/运维/" itemprop="url" rel="index"><span itemprop="name">运维</span></a></span>
+
+                
+                
+                  ，
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/运维/电脑办公环境搭建/" itemprop="url" rel="index"><span itemprop="name">电脑办公环境搭建</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          <br>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <blockquote>
+<p>非工程师办公电脑环境</p>
+</blockquote>
+<a id="more"></a>
+<p><em>电脑型号：联想yoga S370</em><br><em>系统环境：win10</em><br>_<br><a name="a8fyh"></a></p>
+<h3 id="软件"><a href="#软件" class="headerlink" title="软件"></a>软件</h3><p><em>办公交流：微信、钉钉、企业微信</em><br><em>浏览器：chrome、IE浏览器</em><br><em>PDF阅读：adobe reader PDF</em><br><em>压缩软件：7zip</em><br><em>企业邮箱：outlook、邮件</em></p>
+<hr>
+<p><a name="MjDMB"></a></p>
+<h3 id="安装好软件，打开看是否运行正常-同时更改一些设置"><a href="#安装好软件，打开看是否运行正常-同时更改一些设置" class="headerlink" title="安装好软件，打开看是否运行正常,同时更改一些设置"></a>安装好软件，打开看是否运行正常,同时更改一些设置</h3><p><a name="US9PQ"></a></p>
+<h4 id="IE浏览器"><a href="#IE浏览器" class="headerlink" title="IE浏览器"></a>IE浏览器</h4><p><img src="https://cdn.nlark.com/yuque/0/2019/png/298714/1557468368369-d8980a39-e92b-4ed1-9569-38e39a580e06.png#align=left&display=inline&height=341&name=image.png&originHeight=768&originWidth=1363&size=121594&status=done&width=605.7777777777778" alt="image.png"></p>
+<p><img src="https://cdn.nlark.com/yuque/0/2019/png/298714/1557468441598-390538f4-93cf-4807-a43b-34e902556717.png#align=left&display=inline&height=392&name=image.png&originHeight=882&originWidth=839&size=84665&status=done&width=372.8888888888889" alt="image.png"></p>
+<p><img src="https://cdn.nlark.com/yuque/0/2019/png/298714/1557468534482-b3d5dedc-1f8b-4de8-b0ac-0671491fb998.png#align=left&display=inline&height=627&name=image.png&originHeight=1410&originWidth=1079&size=151596&status=done&width=479.55555555555554" alt="image.png"></p>
+<p><img src="https://cdn.nlark.com/yuque/0/2019/png/298714/1557468767253-62ed4ff7-d4b7-492e-9f61-16d4a4de0c5d.png#align=left&display=inline&height=625&name=image.png&originHeight=1406&originWidth=1085&size=160099&status=done&width=482.22222222222223" alt="image.png"></p>
+<p><img src="https://cdn.nlark.com/yuque/0/2019/png/298714/1557468843805-9e87c1fd-09eb-4be7-bd59-2fe45700be98.png#align=left&display=inline&height=497&name=image.png&originHeight=1843&originWidth=1826&size=1695519&status=done&width=492" alt="image.png"></p>
+<p><a name="g8XTv"></a></p>
+<h4 id="chrome浏览器"><a href="#chrome浏览器" class="headerlink" title="chrome浏览器"></a>chrome浏览器</h4><p>打开chrome浏览器，点击右上角<br><img src="https://cdn.nlark.com/yuque/0/2019/png/298714/1557468950710-3dbf97ea-c56a-45b4-88f7-00bbaf228b1d.png#align=left&display=inline&height=492&name=image.png&originHeight=1107&originWidth=749&size=113486&status=done&width=332.8888888888889" alt="image.png"></p>
+<p><img src="https://cdn.nlark.com/yuque/0/2019/png/298714/1557469131595-6cc411b2-8ab0-4410-896a-4d2ec26178b3.png#align=left&display=inline&height=526&name=image.png&originHeight=1511&originWidth=1679&size=161370&status=done&width=585" alt="image.png"></p>
+<p><img src="https://cdn.nlark.com/yuque/0/2019/png/298714/1557469290316-8b51cb09-d52d-4ae6-9ea0-60cfdcb97747.png#align=left&display=inline&height=560&name=image.png&originHeight=1261&originWidth=1635&size=235069&status=done&width=726.6666666666666" alt="image.png"></p>
+<p>退出时，清除浏览数据<br><img src="https://cdn.nlark.com/yuque/0/2019/png/298714/1557469353428-35bf2dc0-660d-41de-a0bf-d9da24dedbdc.png#align=left&display=inline&height=476&name=image.png&originHeight=1072&originWidth=1147&size=117171&status=done&width=509.77777777777777" alt="image.png"></p>
+<p><a name="0QOrH"></a></p>
+<h4 id="adobe-reader-pdf"><a href="#adobe-reader-pdf" class="headerlink" title="adobe reader pdf"></a>adobe reader pdf</h4><p>打开软件，选择“接受”<br><img src="https://cdn.nlark.com/yuque/0/2019/png/298714/1557469708163-71e67cbc-a96d-4c18-95c3-d5b55376009e.png#align=left&display=inline&height=560&name=image.png&originHeight=1261&originWidth=1528&size=251377&status=done&width=679.1111111111111" alt="image.png"></p>
+<p><img src="https://cdn.nlark.com/yuque/0/2019/png/298714/1557469952160-b53be745-d4e0-41d3-a0df-e9314942e480.png#align=left&display=inline&height=904&name=image.png&originHeight=2034&originWidth=2324&size=289304&status=done&width=1032.888888888889" alt="image.png"></p>
+<p><img src="https://cdn.nlark.com/yuque/0/2019/png/298714/1557470013278-544930cc-3846-4c8a-b0e9-7089da112eb2.png#align=left&display=inline&height=914&name=image.png&originHeight=2057&originWidth=2334&size=358488&status=done&width=1037.3333333333333" alt="image.png"></p>
+<p><img src="https://cdn.nlark.com/yuque/0/2019/png/298714/1557470041867-a430afa7-1a88-40b8-9232-71dec93235c3.png#align=left&display=inline&height=912&name=image.png&originHeight=2051&originWidth=2336&size=346503&status=done&width=1038.2222222222222" alt="image.png"></p>
+<p><img src="https://cdn.nlark.com/yuque/0/2019/png/298714/1557470093794-4a75cf71-66ac-46c0-866f-60616d15b416.png#align=left&display=inline&height=688&name=image.png&originHeight=1548&originWidth=1968&size=138994&status=done&width=874.6666666666666" alt="image.png"></p>
+<p><img src="https://cdn.nlark.com/yuque/0/2019/png/298714/1557470175106-417829c0-6aeb-4faa-bb31-54eb2241bcdc.png#align=left&display=inline&height=569&name=image.png&originHeight=1281&originWidth=948&size=113780&status=done&width=421.3333333333333" alt="image.png"></p>
+<p><a name="VPITP"></a></p>
+<h4 id="7-zip"><a href="#7-zip" class="headerlink" title="7-zip"></a>7-zip</h4><p><strong><img src="https://cdn.nlark.com/yuque/0/2019/png/298714/1557467832788-476c8f06-777d-4aae-8da4-1329a2f3713f.png#align=left&display=inline&height=635&name=image.png&originHeight=1429&originWidth=911&size=82850&status=done&width=404.8888888888889" alt="image.png"></strong><br><em><img src="https://cdn.nlark.com/yuque/0/2019/png/298714/1557467913075-bffd45ee-0aec-4b24-9c34-9c68c4f01df7.png#align=left&display=inline&height=665&name=image.png&originHeight=1496&originWidth=2869&size=300702&status=done&width=1275.111111111111" alt="image.png"></em><br><em><img src="https://cdn.nlark.com/yuque/0/2019/png/298714/1557467972714-7f0c324a-304e-4906-a4e7-a609f81badb5.png#align=left&display=inline&height=538&name=image.png&originHeight=1210&originWidth=954&size=103248&status=done&width=424" alt="image.png"><img src="https://cdn.nlark.com/yuque/0/2019/png/298714/1557468064302-1c2f4c68-3ca8-449a-9247-1acf36ce30fa.png#align=left&display=inline&height=538&name=image.png&originHeight=1210&originWidth=954&size=99695&status=done&width=424" alt="image.png"></em></p>
+<p><a name="i8f9N"></a></p>
+<h3 id="打印驱动"><a href="#打印驱动" class="headerlink" title="打印驱动"></a>打印驱动</h3><p>不使用官网的官方pc驱动，直接在设置–打印机和扫描仪中，搜素到HP Color LaserJet Pro MFP M281fdw ，打印机共享自动下载驱动，装完打印后，电脑会自动添加HP smart<br><img src="https://cdn.nlark.com/yuque/0/2019/png/298714/1557470300467-afc02c63-90f3-4e75-b903-ebededbb3e11.png#align=left&display=inline&height=841&name=image.png&originHeight=1893&originWidth=2564&size=1271635&status=done&width=1139.5555555555557" alt="image.png"></p>
+<p><img src="https://cdn.nlark.com/yuque/0/2019/png/298714/1557470384379-c9ab0301-24b4-4ea1-9daf-9c79d3f1de4b.png#align=left&display=inline&height=756&name=image.png&originHeight=1702&originWidth=2304&size=780203&status=done&width=1024" alt="image.png"></p>
+<p><a name="84tIQ"></a></p>
+<h3 id="更改新员工邮箱密码以及激活office和outlook"><a href="#更改新员工邮箱密码以及激活office和outlook" class="headerlink" title="更改新员工邮箱密码以及激活office和outlook"></a>更改新员工邮箱密码以及激活office和outlook</h3><ul>
+<li>打开本地outlook，登入初始密码，修改初始密码，修改完后登入outlook</li>
+<li>打开word，电话激活office</li>
+<li>若产品激活使用本地outlook，无权限则用邮箱</li>
+</ul>
+<p><img src="https://cdn.nlark.com/yuque/0/2019/png/298714/1557470761852-f5e19fa2-8c0d-4457-8e91-5c29e5dbe52a.png#align=left&display=inline&height=638&name=image.png&originHeight=1435&originWidth=792&size=47091&status=done&width=352" alt="image.png"></p>
+<p><img src="https://cdn.nlark.com/yuque/0/2019/png/298714/1557470697582-1535cf54-21b3-4af2-ad35-bca2857a31e3.png#align=left&display=inline&height=486&name=image.png&originHeight=1094&originWidth=1025&size=78808&status=done&width=455.55555555555554" alt="image.png"></p>
+<p><img src="https://cdn.nlark.com/yuque/0/2019/png/298714/1557470806353-ca18c0b0-c6b2-4a94-b839-7196ede825c7.png#align=left&display=inline&height=486&name=image.png&originHeight=1093&originWidth=1032&size=62314&status=done&width=458.6666666666667" alt="image.png"></p>
+<p><img src="https://cdn.nlark.com/yuque/0/2019/png/298714/1557470995301-a0f5e5c7-235b-4177-bb8e-072c96d9c5c9.png#align=left&display=inline&height=429&name=image.png&originHeight=966&originWidth=1002&size=52817&status=done&width=445.3333333333333" alt="image.png"></p>
+<p><img src="https://cdn.nlark.com/yuque/0/2019/png/298714/1557471067393-1bc716d4-a089-4013-9180-64d6c2f300d1.png#align=left&display=inline&height=823&name=image.png&originHeight=1852&originWidth=3019&size=1968777&status=done&width=1341.7777777777778" alt="image.png"></p>
+<p><a name="IiRNK"></a></p>
+<h3 id="启动禁用"><a href="#启动禁用" class="headerlink" title="启动禁用"></a>启动禁用</h3><p>打开任务管理器–启动–选择关闭相应的软件<br><img src="https://cdn.nlark.com/yuque/0/2019/png/298714/1557048919959-c830af8f-fbd5-472f-add8-ba7059b23909.png#align=left&display=inline&height=666&name=image.png&originHeight=1498&originWidth=1811&size=142778&status=done&width=804.8888888888889" alt="image.png"></p>
+<p><strong>删除第三方软件（联想电脑管家、联想浏览器、迈克菲查毒软件等）</strong><br>**<br><img src="https://cdn.nlark.com/yuque/0/2019/png/298714/1557467576361-ffff213b-72d5-47dc-bf25-7385ee4d1fc9.png#align=left&display=inline&height=701&name=image.png&originHeight=1577&originWidth=2389&size=440369&status=done&width=1061.7777777777778" alt="image.png"></p>
+<p><a name="YVM8Q"></a></p>
+<h3 id="window自带的appx"><a href="#window自带的appx" class="headerlink" title="window自带的appx"></a>window自带的appx</h3><p><img src="https://cdn.nlark.com/yuque/0/2019/png/298714/1557474379588-2debeed0-b9b7-444c-a57b-5fbc9b1e33d9.png#align=left&display=inline&height=640&name=image.png&originHeight=1440&originWidth=1531&size=1238245&status=done&width=680.4444444444445" alt="image.png"></p>
+<p><img src="https://cdn.nlark.com/yuque/0/2019/png/298714/1557474440731-a64a3f13-d2ea-468b-89cd-f666a9d6c76f.png#align=left&display=inline&height=572&name=image.png&originHeight=1287&originWidth=1458&size=1093626&status=done&width=648" alt="image.png"></p>
+<p><a name="kgUvv"></a></p>
+<h4 id="使用Dism-，管理自带APPX"><a href="#使用Dism-，管理自带APPX" class="headerlink" title="使用Dism ++，管理自带APPX"></a>使用Dism ++，管理自带APPX</h4><p><img src="https://cdn.nlark.com/yuque/0/2019/png/298714/1557474730332-8e918ecd-5945-4f89-bdb3-d79eedbd5acf.png#align=left&display=inline&height=691&name=image.png&originHeight=1555&originWidth=2216&size=277129&status=done&width=984.8888888888889" alt="image.png"></p>
+<p><img src="https://cdn.nlark.com/yuque/0/2019/png/298714/1557474801796-3431f2cd-8af6-4dcc-91bd-b7943a9070cb.png#align=left&display=inline&height=692&name=image.png&originHeight=1557&originWidth=2219&size=238376&status=done&width=986.2222222222222" alt="image.png"></p>
+<p><a name="9G5ds"></a></p>
+<h3 id="更新系统，更新补丁"><a href="#更新系统，更新补丁" class="headerlink" title="更新系统，更新补丁"></a>更新系统，更新补丁</h3><p>**<br><img src="https://cdn.nlark.com/yuque/0/2019/png/298714/1557467513086-d266960a-8fed-4766-87a7-71789e127fb0.png#align=left&display=inline&height=841&name=image.png&originHeight=1893&originWidth=2564&size=1093254&status=done&width=1139.5555555555557" alt="image.png"></p>
+<p><img src="https://cdn.nlark.com/yuque/0/2019/png/298714/1557468147900-f4114999-b9e4-48b7-ad81-7fc384f085f4.png#align=left&display=inline&height=841&name=image.png&originHeight=1893&originWidth=2564&size=247362&status=done&width=1139.5555555555557" alt="image.png"><br><a name="Qxnue"></a></p>
+<p>####<br><a name="jPfPt"></a></p>
+<h4 id="使用Dism-更新驱动"><a href="#使用Dism-更新驱动" class="headerlink" title="使用Dism++,更新驱动"></a>使用Dism++,更新驱动</h4><p><img src="https://cdn.nlark.com/yuque/0/2019/png/298714/1557474891169-9188adc4-ee3d-4f9f-8012-c49e06099278.png#align=left&display=inline&height=691&name=image.png&originHeight=1555&originWidth=2221&size=186734&status=done&width=987.1111111111111" alt="image.png"><br><a name="TbKrw"></a></p>
+<p>###<br><a name="FSFka"></a></p>
+<h3 id="快速访问"><a href="#快速访问" class="headerlink" title="快速访问"></a>快速访问</h3><p><img src="https://cdn.nlark.com/yuque/0/2019/png/298714/1557475832067-ed85af71-fb3e-4f27-8d06-6f0a44fd9e67.png#align=left&display=inline&height=293&name=image.png&originHeight=659&originWidth=1142&size=105095&status=done&width=507.55555555555554" alt="image.png"></p>
+<p><img src="https://cdn.nlark.com/yuque/0/2019/png/298714/1557475886700-fb01c709-4709-426e-839d-bc306a9a1af3.png#align=left&display=inline&height=552&name=image.png&originHeight=1241&originWidth=1007&size=160602&status=done&width=447.55555555555554" alt="image.png"></p>
+<p><a name="P01Aw"></a></p>
+<h3 id="更改桌面背景（公司logo背景图）"><a href="#更改桌面背景（公司logo背景图）" class="headerlink" title="更改桌面背景（公司logo背景图）"></a>更改桌面背景（公司logo背景图）</h3><p><strong><br></strong><img src="https://cdn.nlark.com/yuque/0/2019/png/298714/1557468207470-4a8f1350-01e6-458b-b7c3-e839cb415949.png#align=left&display=inline&height=841&name=image.png&originHeight=1893&originWidth=2564&size=1630371&status=done&width=1139.5555555555557" alt="image.png"><strong><br></strong><br><a name="IW4tN"></a></p>
+<h3 id="重启，再次检测"><a href="#重启，再次检测" class="headerlink" title="重启，再次检测"></a>重启，再次检测</h3>
+      
+    </div>
+
+    
+
+    
+      
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+        
+          
+        
+        <div class="post-tags">
+          
+            <a href="/tags/运维/" rel="tag"># 运维</a>
+          
+            <a href="/tags/电脑办公环境搭建/" rel="tag"># 电脑办公环境搭建</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/07/29/删除电脑自带的软件/" rel="next" title="删除win10自带的软件">
+                <i class="fa fa-chevron-left"></i> 删除win10自带的软件
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/07/29/hplip for Linux (3.19._)/" rel="prev" title="hp for linux 驱动">
+                hp for linux 驱动 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+  </div>
+
+
+          </div>
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  
+    <img class="site-author-image" itemprop="image" src="/images/C.png" alt="不加冰不加糖">
+  
+  <p class="site-author-name" itemprop="name">不加冰不加糖</p>
+  <div class="site-description motion-element" itemprop="description">啦~啦~啦</div>
+</div>
+
+
+  <nav class="site-state motion-element">
+    
+      <div class="site-state-item site-state-posts">
+        
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">44</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+    
+
+    
+      
+      
+      <div class="site-state-item site-state-categories">
+        
+          
+            <a href="/categories/">
+          
+        
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        <span class="site-state-item-count">16</span>
+        <span class="site-state-item-name">分类</span>
+        </a>
+      </div>
+    
+
+    
+      
+      
+      <div class="site-state-item site-state-tags">
+        
+          
+            <a href="/tags/">
+          
+        
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        <span class="site-state-item-count">11</span>
+        <span class="site-state-item-name">标签</span>
+        </a>
+      </div>
+    
+  </nav>
+
+
+
+
+
+
+
+  <div class="links-of-author motion-element">
+    
+      <span class="links-of-author-item">
+      
+      
+        
+      
+      
+        
+      
+        <a href="https://github.com/litiangu" title="GitHub &rarr; https://github.com/litiangu" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+      </span>
+    
+      <span class="links-of-author-item">
+      
+      
+        
+      
+      
+        
+      
+        <a href="mailto:litian.gu@outlook.com" title="E-Mail &rarr; mailto:litian.gu@outlook.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+      </span>
+    
+  </div>
+
+
+
+
+
+
+
+          
+          
+        </div>
+      </div>
+
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#软件"><span class="nav-number">1.</span> <span class="nav-text">软件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装好软件，打开看是否运行正常-同时更改一些设置"><span class="nav-number">2.</span> <span class="nav-text">安装好软件，打开看是否运行正常,同时更改一些设置</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#IE浏览器"><span class="nav-number">2.1.</span> <span class="nav-text">IE浏览器</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#chrome浏览器"><span class="nav-number">2.2.</span> <span class="nav-text">chrome浏览器</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#adobe-reader-pdf"><span class="nav-number">2.3.</span> <span class="nav-text">adobe reader pdf</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#7-zip"><span class="nav-number">2.4.</span> <span class="nav-text">7-zip</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#打印驱动"><span class="nav-number">3.</span> <span class="nav-text">打印驱动</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#更改新员工邮箱密码以及激活office和outlook"><span class="nav-number">4.</span> <span class="nav-text">更改新员工邮箱密码以及激活office和outlook</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#启动禁用"><span class="nav-number">5.</span> <span class="nav-text">启动禁用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#window自带的appx"><span class="nav-number">6.</span> <span class="nav-text">window自带的appx</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#使用Dism-，管理自带APPX"><span class="nav-number">6.1.</span> <span class="nav-text">使用Dism ++，管理自带APPX</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#更新系统，更新补丁"><span class="nav-number">7.</span> <span class="nav-text">更新系统，更新补丁</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#使用Dism-更新驱动"><span class="nav-number">7.1.</span> <span class="nav-text">使用Dism++,更新驱动</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#快速访问"><span class="nav-number">8.</span> <span class="nav-text">快速访问</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#更改桌面背景（公司logo背景图）"><span class="nav-number">9.</span> <span class="nav-text">更改桌面背景（公司logo背景图）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#重启，再次检测"><span class="nav-number">10.</span> <span class="nav-text">重启，再次检测</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">不加冰不加糖</span>
+
+  
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.9.0</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> v7.2.0</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+    
+
+    
+
+  </div>
+
+  
+
+<script>
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+  
+  <script src="/lib/jquery/index.js?v=3.4.1"></script>
+
+  
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+
+
+
+  <script src="/js/utils.js?v=7.2.0"></script>
+
+  <script src="/js/motion.js?v=7.2.0"></script>
+
+
+
+  
+  
+
+
+  <script src="/js/affix.js?v=7.2.0"></script>
+
+  <script src="/js/schemes/pisces.js?v=7.2.0"></script>
+
+
+
+  
+  <script src="/js/scrollspy.js?v=7.2.0"></script>
+<script src="/js/post-details.js?v=7.2.0"></script>
+
+
+
+  <script src="/js/next-boot.js?v=7.2.0"></script>
+
+  
+
+  
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+  <script>
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url).replace(/\/{2,}/g, '/');
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x"></i></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x"></i></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+if ($('body').find('pre.mermaid').length) {
+  $.ajax({
+    type: 'GET',
+    url: '//cdn.jsdelivr.net/npm/mermaid@8/dist/mermaid.min.js',
+    dataType: 'script',
+    cache: true,
+    success: function() {
+      mermaid.initialize({
+        theme: 'forest',
+        logLevel: 3,
+        flowchart: { curve: 'linear' },
+        gantt: { axisFormat: '%m/%d/%Y' },
+        sequence: { actorMargin: 50 }
+      });
+    }
+  });
+}
+</script>
+
+
+<script>
+// GET RESPONSIVE HEIGHT PASSED FROM IFRAME
+
+window.addEventListener("message", function(e) {
+  var data = e.data;
+  if ((typeof data === 'string') && (data.indexOf('ciu_embed') > -1)) {
+    var featureID = data.split(':')[1];
+    var height = data.split(':')[2];
+    $(`iframe[data-feature=${featureID}]`).height(parseInt(height) + 30);
+  }
+}, false);
+</script>
+
+
+
+
+
+
+
+
+  
+
+</body>
+</html>

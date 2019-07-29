@@ -1,6 +1,245 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[本地网站搭建]]></title>
+    <url>%2F2019%2F07%2F29%2F%E6%9C%AC%E5%9C%B0%E7%BD%91%E7%AB%99%E6%90%AD%E5%BB%BA%2F</url>
+    <content type="text"><![CDATA[本地网站搭建 参考链接：https://www.jianshu.com/p/7a6193482ca2 Bookstack, 书本形式的笔记体系。开源，美观。需要运行服务。 官网：https://www.bookstackapp.com/ 实例：https://demo.bookstackapp.com/]]></content>
+      <categories>
+        <category>开发环境搭建</category>
+        <category>搭建环境</category>
+      </categories>
+      <tags>
+        <tag>Ubuntu</tag>
+        <tag>开发环境搭建</tag>
+        <tag>Windows</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[MySQL]]></title>
+    <url>%2F2019%2F07%2F29%2FMySQL%E6%9F%A5%E7%9C%8B%E7%94%A8%E6%88%B7%E4%BF%A1%E6%81%AF%2F</url>
+    <content type="text"><![CDATA[MySQL查看用户信息 连接到数据库 mysql -u root -p #root进入 查看数据库列表 show database; 查看用户状态 use mysql;]]></content>
+      <categories>
+        <category>开发环境搭建</category>
+        <category>搭建环境</category>
+      </categories>
+      <tags>
+        <tag>Ubuntu</tag>
+        <tag>开发环境搭建</tag>
+        <tag>Windows</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[LNMP堆栈]]></title>
+    <url>%2F2019%2F07%2F29%2FLNMP%E5%A0%86%E6%A0%88%2F</url>
+    <content type="text"><![CDATA[LNMP堆栈 参考链接：https://www.digitalocean.com/community/tutorials/how-to-install-linux-nginx-mysql-php-lemp-stack-in-ubuntu-16-04#step-2-install-mysql-to-manage-site-data LEMP软件堆栈是一组可用于为动态网页和Web应用程序提供服务的软件。这是一个描述Linux操作系统的首字母缩写词，带有Nginx Web服务器。后端数据存储在MySQL数据库中，动态处理由PHP处理。]]></content>
+      <categories>
+        <category>开发环境搭建</category>
+        <category>搭建环境</category>
+      </categories>
+      <tags>
+        <tag>Ubuntu</tag>
+        <tag>开发环境搭建</tag>
+        <tag>Windows</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[vmware workstation]]></title>
+    <url>%2F2019%2F07%2F29%2Fvmware%20workstation%2F</url>
+    <content type="text"><![CDATA[vmware workstation 未启用Hyper-V，仍有VMware不兼容报错_本身也没有开启Hyper-V,网上建议将Hyper-V开启再关掉。关掉后，但是重启后依然有报错。 因为报错是“WMware Workstation与Hyper-v不兼容。”， 所以重装WMware Workstation应该是没有用的。 修改注册表键值 在搜索栏里搜索regedit，然后打开注册表编辑器。键值的路径为\HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\DeviceGuard\Scenarios\HypervisorEnforcedCodeIntegrity 将标红的两个键值改为0，然后重启电脑。 重新打开vmware workstation 15，正常运行]]></content>
+      <categories>
+        <category>开发环境搭建</category>
+        <category>搭建环境</category>
+      </categories>
+      <tags>
+        <tag>Ubuntu</tag>
+        <tag>开发环境搭建</tag>
+        <tag>Windows</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Linux开发环境搭建（无人）]]></title>
+    <url>%2F2019%2F07%2F29%2FLinux%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA%EF%BC%88%E6%97%A0%E4%BA%BA%EF%BC%89%2F</url>
+    <content type="text"><![CDATA[Linux开发环境搭建（无人） 参考链接：https://note.youdao.com/ynoteshare1/index.html？id=19256058d87f47346ed761dec80999a3&amp;type=note]]></content>
+      <categories>
+        <category>开发环境搭建</category>
+        <category>搭建环境</category>
+      </categories>
+      <tags>
+        <tag>Ubuntu</tag>
+        <tag>开发环境搭建</tag>
+        <tag>Windows</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Xampp]]></title>
+    <url>%2F2019%2F07%2F29%2FXampp%2F</url>
+    <content type="text"><![CDATA[Xampp https://www.apachefriends.org/zh_cn/download.html XAMPP是一个易于安装的Apache发行版，其中包含MariaDB、PHP和Perl。]]></content>
+      <categories>
+        <category>开发环境搭建</category>
+        <category>搭建环境</category>
+      </categories>
+      <tags>
+        <tag>Ubuntu</tag>
+        <tag>开发环境搭建</tag>
+        <tag>Windows</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[删除MySQL]]></title>
+    <url>%2F2019%2F07%2F29%2F%E5%88%A0%E9%99%A4MySQL%2F</url>
+    <content type="text"><![CDATA[删除MySQL 参考链接：https://blog.csdn.net/iehadoop/article/details/82961264 首先查看MySQL的依赖项，dpkg –list|grep mysql 卸载： sudo apt-get remove mysql-common 卸载：sudo apt-get autoremove –purge mysql-server-5.7 清除残留数据：dpkg -l|grep ^rc|awk ‘{print$2}’|sudo xargs dpkg -P 再次查看MySQL的剩余依赖项：dpkg –list|grep mysql 继续删除剩余依赖项，如：sudo apt-get autoremove –purge mysql-apt-config 至此已经没有了MySQL的依赖项，删除MySQL]]></content>
+      <categories>
+        <category>开发环境搭建</category>
+        <category>删除环境</category>
+      </categories>
+      <tags>
+        <tag>Ubuntu</tag>
+        <tag>开发环境搭建</tag>
+        <tag>Windows</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[删除Nginx、php]]></title>
+    <url>%2F2019%2F07%2F29%2F%E5%88%A0%E9%99%A4Nginx%E3%80%81php%2F</url>
+    <content type="text"><![CDATA[删除Nginx、php 在Ubuntu 16.04中彻底删除Nginx+PHP的方法。 1.1 删除nginx，–purge包括配置文件sudo apt-get –purge remove nginx 1.2 自动移除全部不使用的软件包sudo apt-get autoremove 1.3 罗列出与nginx相关的软件1dpkg --get-selections|grep nginx 12345执行1.3的结果:stephen@stephen-OptiPlex-390:~$ dpkg --get-selections|grep nginxnginx installnginx-common installnginx-core install 1.4 删除1.3查询出与nginx有关的软件123sudo apt-get --purge remove nginxsudo apt-get --purge remove nginx-commonsudo apt-get --purge remove nginx-core 这样就可以完全卸载掉nginx包括配置文件 2.查看nginx正在运行的进程，如果有就kill掉1ps -ef |grep nginx 看下nginx还有没有启动,一般执行完1后，nginx还是启动着的，如下： 1234567stephen@stephen-OptiPlex-390:~$ ps -ef |grep nginxroot 7875 2317 0 15:02 ? 00:00:00 nginx: master process /usr/sbin/nginxwww-data 7876 7875 0 15:02 ? 00:00:00 nginx: worker processwww-data 7877 7875 0 15:02 ? 00:00:00 nginx: worker processwww-data 7878 7875 0 15:02 ? 00:00:00 nginx: worker processwww-data 7879 7875 0 15:02 ? 00:00:00 nginx: worker processstephen 8321 3510 0 15:20 pts/0 00:00:00 grep --color=auto nginx kill nginx进程1sudo kill -9 7875 7876 7877 7879 4.全局查找与nginx相关的文件1sudo find / -name nginx* 5.依依删除4列出的所有文件1sudo rm -rf file 这样就彻底删除nginx了 6. 再次重装12sudo apt-get updatesudo apt-get install nginx 三、卸载删除php sudo apt-get –purge remove libapache2-mod-php5 php5 php5-gd php5-mysqlsudo apt-get autoremove php5 删除关联，sudo find /etc -name “php“ |xargs rm -rf 清楚残留信息dpkg -l |grep ^rc|awk ’{print $2}’ |sudo xargs dpkg -P 最后用 dpkg -l | grep php 和dpkg -l | grep php5 检查，如无返回即干净卸载，彻底删除php]]></content>
+      <categories>
+        <category>开发环境搭建</category>
+        <category>删除环境</category>
+      </categories>
+      <tags>
+        <tag>Ubuntu</tag>
+        <tag>开发环境搭建</tag>
+        <tag>Windows</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[彻底卸载apache2、mysql、php(各版本通用)]]></title>
+    <url>%2F2019%2F07%2F29%2F%E5%BD%BB%E5%BA%95%E5%8D%B8%E8%BD%BDapache2%E3%80%81mysql%E3%80%81php(%E5%90%84%E7%89%88%E6%9C%AC%E9%80%9A%E7%94%A8)%2F</url>
+    <content type="text"><![CDATA[彻底卸载apache2、mysql、php(各版本通用) 一、卸载删除 mysql mysql -vsudo apt-get autoremove –purge mysql-server-5.0sudo apt-get remove mysql-serversudo apt-get autoremove mysql-serversudo apt-get remove mysql-common (非常重要) 上面的其实有一些是多余的，建议还是按照顺序执行一遍清理残留数据： dpkg -l |grep ^rc|awk ‘{print $2}’ |sudo xargs dpkg -Psudo find /etc -name “_mysql_” |xargs rm -rf 最后用 dpkg -l | grep mysql 检查，如无返回即干净卸载 dpkg -l | grep mysql 二、卸载删除apache sudo apt-get –purge remove apache-commonsudo apt-get –purge remove apache 找到没有删除掉的配置文件，一并删除 sudo find /etc -name “_apache_” |xargs rm -rfsudo rm -rf /var/wwwsudo rm -rf /etc/libapache2-mod-jksudo rm -rf /etc/init.d/apache2sudo rm -rf /etc/apache2 删除关联， dpkg -l |grep apache2|awk ‘{print $2}’|xargs dpkg -P 删除svn sudo apt-get remove subversionsudo apt-get remove libapache2-svn 最后用 dpkg -l | grep apache 和 dpkg -l | grep apache2检查，如无返回即干净卸载 dpkg -l | grep apachedpkg -l | grep apache2 #### 三、卸载删除php sudo apt-get –purge remove libapache2-mod-php5 php5 php5-gd php5-mysql #php*根据实际自己电脑版本sudo apt-get autoremove php5 删除关联， sudo find /etc -name “_php_” |xargs rm -rf 清楚残留信息 dpkg -l |grep ^rc|awk ’{print $2}’ |sudo xargs dpkg -P 最后用 dpkg -l | grep php 和dpkg -l | grep php5 检查，如无返回即干净卸载 dpkg -l | grep phpdpkg -l | grep php5]]></content>
+      <categories>
+        <category>开发环境搭建</category>
+        <category>删除环境</category>
+      </categories>
+      <tags>
+        <tag>Ubuntu</tag>
+        <tag>开发环境搭建</tag>
+        <tag>Windows</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[zoom for logitech]]></title>
+    <url>%2F2019%2F07%2F29%2Fzoom%20for%20logitech%2F</url>
+    <content type="text"><![CDATA[zoom for logitech]]></content>
+      <categories>
+        <category>运维</category>
+        <category>设备驱动</category>
+      </categories>
+      <tags>
+        <tag>运维</tag>
+        <tag>设备驱动</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[hp for linux 驱动]]></title>
+    <url>%2F2019%2F07%2F29%2Fhplip%20for%20Linux%20(3.19._)%2F</url>
+    <content type="text"><![CDATA[hplip for Linux (3.19.*) hplip-3.19.3.run.zip 系统环境：Ubuntu16.04 LTS打印驱动：hplip-3.19.3.run 根据你在系统上保存文件的位置来调整“cd”命令 终端输入 sh hplip-3.19.3.run,运行文件 选择安装模式：自动（输入“a”）或自定义（输入“c”)，选择自动安装模式 确保安装程序检测到正确的linux 发行版。如果选择错误的版本，则不同的linux版本使用不同的安装过程，安装程序可能会失败。 输入root/超级用户密码 阅读安装说明 是否希望安装程序安装特定于hplip的策略/配置文件（y=yes*，n=no，q=quit）？选择yes,进行安装 检测到有旧版本，选择（输入“i”），移除旧版本同时安装新版本 安装依赖项，然后“./configure”和“make”运行 HPLIP更新通知，是否要检查hplip更新？选择yes 提示你是否需要重新启动来运行设备，里面中提示到如果您使用的是网络/无线，则可以忽略并继续。所以选择输入“i” 打印机设置，选择输入“i”进入交互模式 选择打印机连接类型，打印机是网络连接，所以输入“1” 搜索到两台网络打印机,HP-colorlaserjet-mfp-m281fdw 是公司的彩色打印机，另一台是私人的。 请选择公司的打印机，输入0 为打印机输入一个名称，选择输入“m” 确认PPD文件，选择yes 添加传真信息 不执行传真设置，选择no 打印测试页，选择yes 打出测试页如下就ok]]></content>
+      <categories>
+        <category>运维</category>
+        <category>设备驱动</category>
+      </categories>
+      <tags>
+        <tag>运维</tag>
+        <tag>设备驱动</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[非工程师办公电脑环境]]></title>
+    <url>%2F2019%2F07%2F29%2F%E9%9D%9E%E5%B7%A5%E7%A8%8B%E5%B8%88%E5%8A%9E%E5%85%AC%E7%94%B5%E8%84%91%E7%8E%AF%E5%A2%83%2F</url>
+    <content type="text"><![CDATA[非工程师办公电脑环境 电脑型号：联想yoga S370系统环境：win10_ 软件办公交流：微信、钉钉、企业微信浏览器：chrome、IE浏览器PDF阅读：adobe reader PDF压缩软件：7zip企业邮箱：outlook、邮件 安装好软件，打开看是否运行正常,同时更改一些设置 IE浏览器 chrome浏览器打开chrome浏览器，点击右上角 退出时，清除浏览数据 adobe reader pdf打开软件，选择“接受” 7-zip 打印驱动不使用官网的官方pc驱动，直接在设置–打印机和扫描仪中，搜素到HP Color LaserJet Pro MFP M281fdw ，打印机共享自动下载驱动，装完打印后，电脑会自动添加HP smart 更改新员工邮箱密码以及激活office和outlook 打开本地outlook，登入初始密码，修改初始密码，修改完后登入outlook 打开word，电话激活office 若产品激活使用本地outlook，无权限则用邮箱 启动禁用打开任务管理器–启动–选择关闭相应的软件 删除第三方软件（联想电脑管家、联想浏览器、迈克菲查毒软件等）** window自带的appx 使用Dism ++，管理自带APPX 更新系统，更新补丁** #### 使用Dism++,更新驱动 ### 快速访问 更改桌面背景（公司logo背景图） 重启，再次检测]]></content>
+      <categories>
+        <category>运维</category>
+        <category>电脑办公环境搭建</category>
+      </categories>
+      <tags>
+        <tag>运维</tag>
+        <tag>电脑办公环境搭建</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[删除win10自带的软件]]></title>
+    <url>%2F2019%2F07%2F29%2F%E5%88%A0%E9%99%A4%E7%94%B5%E8%84%91%E8%87%AA%E5%B8%A6%E7%9A%84%E8%BD%AF%E4%BB%B6%2F</url>
+    <content type="text"><![CDATA[删除电脑自带的软件 （如联想电脑管家、联想浏览器、迈克菲等软件） 系统程序里面，卸载程序 若正常情况下无法卸载程序，可以使用Uninstall Tool软件去卸载，强制清除 ** 打开Uninstall Tool，看到左上角选项卸载程序，然后在右边列出的软件列表中选择要卸载的软件 比如我要卸载掉7-zip,选中这个软件，然后在左侧选中卸载 ** 弹出卸载程序界面，按指示操作即可 或者在搜素里找要卸载的软件，比如搜索7-zip，右键–打开文件位置 找到卸载的程序，Uninstall.exe,双击打开，按照指示卸载]]></content>
+      <categories>
+        <category>运维</category>
+        <category>电脑办公环境搭建</category>
+      </categories>
+      <tags>
+        <tag>运维</tag>
+        <tag>电脑办公环境搭建</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[再生龙备份、还原系统]]></title>
+    <url>%2F2019%2F07%2F29%2F%E5%86%8D%E7%94%9F%E9%BE%99%E5%A4%87%E4%BB%BD%E3%80%81%E8%BF%98%E5%8E%9F%2F</url>
+    <content type="text"><![CDATA[再生龙备份、还原 参考链接：http://www.mamicode.com/info-detail-2261652.html 使用再生龙对Ubuntu16.04系统进行完全备份与还原 1、制作再生龙U盘启动** a、**Clonezilla live 20190108-cosmic（再生龙镜像） 下载链接：http://clonezilla.nchc.org.tw/clonezilla-live/download/，(需翻墙下载)，选择稳定-替代版-20190108-cosmic b、refus(镜像刻录软件) c、一个U盘一个固态硬盘或者两个空白大容量U盘（U盘用来存储再生龙镜像刻录，固态硬盘来存储备份Ubuntu系统备份文件） 2、再生龙镜像刻录步骤 a、打开refus软件，选择Clonezilla.iso 3、对Ubuntu系统完全备份（测试机器型号：ThinkPad X1 Extreme）备注：测试机器型号分辨率太高，导致进入再生龙界面的时候，画面非常的小，非常难看清，此步骤过程参考网址链接里面的截图，操作流程基本一样；下面过程以文字描述，结合参考网页截图参考链接 a、按F12进入boot–U盘启动b、进入再生龙系统，选择第一项–enterc、进入再生龙界面选项，选择第一项–enterd、语言选择–简体中文e、键盘设置–默认键盘设置–enterf、使用再生龙–选择第一项–enterg、模式选择–选择第一项–enterh、模式选择–选择第一项–enteri、插入备份Ubuntu系统的存储硬盘，插入之后大概等待5s左右，再按一次enterj、查看插入的硬盘设备是否检查出来，检查出来之后按CTRL+C继续执行k、选择储存镜像的设备–看清自己要储存的硬盘型号选择–enterl、目录选择–默认第一个–按Tab键–选择Done–enterm、向导模式选择–选择初级模式–entern、选择备份模式–选择储存本机硬盘为镜像文件–entero、保存镜像文件名称–使用系统默认名称–enterp、选择备份源–选择第一个–enterq、对备份源分区文件系统检测–选择跳过–enterr、是否检查镜像完整性–选择跳过–enters、是否对镜像加密–不加密–entert、备份完之后，要执行的动作–看情况选择（一般选择重启）u、备份进度–等待进度条完成–完成后自动重启 4、对Ubuntu系统进行还原选择待还原的机器，将U盘插入进行操作a、按F12进入boot–U盘启动b、进入再生龙系统，选择第一项–enterc、进入再生龙界面选项，选择第一项–enterd、语言选择–简体中文e、键盘设置–默认键盘设置–enterf、使用再生龙–选择第一项–enterg、模式选择–选择第一项–enterh、模式选择–选择第一项–enteri、插入刚才备份的储存硬盘，检测到之后键入Ctrl+Cj、选择存储备份文件的设备k、目录选择–按Tab键–选择Done–enterl、继续选择第一项–enterm、向导模式选择–选择新手模式–entern、选择备份文件还原到哪里–选择还原镜像文件到本机硬盘–entero、选择之前备份的文件–选择之前默认名称的镜像文件–enterp、还原备份文件到哪个硬盘–选择第一项–enterq、对备份源分区文件系统检测–选择跳过–enterr、是否检查镜像完整性–选择跳过–enters、还原完成之后操作–选择重启–entert、备份进度–等待进度条完成–完成后自动重启]]></content>
+      <categories>
+        <category>运维</category>
+        <category>还原、备份系统</category>
+      </categories>
+      <tags>
+        <tag>运维</tag>
+        <tag>电脑办公环境搭建</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[安装wps字体配置]]></title>
+    <url>%2F2019%2F07%2F29%2FWPS%20for%20Linux%E5%AD%97%E4%BD%93%E9%85%8D%E7%BD%AE%EF%BC%88Ubuntu16.04%EF%BC%89%2F</url>
+    <content type="text"><![CDATA[WPS for Linux字体配置（Ubuntu16.04） 参考文档：链接 错误提示： 解决方法：下载字体库 1、解压sudo unzip wps_symbol_fonts.zip -d /usr/share/fonts/wps-office解压完后再次打开WPS就不会看到报错了]]></content>
+      <categories>
+        <category>Ubuntu</category>
+        <category>安装Ubuntu软件</category>
+      </categories>
+      <tags>
+        <tag>Ubuntu</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[linux 解压xxx.tar.xz]]></title>
+    <url>%2F2019%2F07%2F29%2Flinux%20%E8%A7%A3%E5%8E%8Bxxx.tar.xz%2F</url>
+    <content type="text"><![CDATA[linux 解压xxx.tar.xz ***.tar.xz文件，双层压缩_ xz -d *.tar.xz**tar -xvf *.tar** 可以看到这个压缩包也是打包后再压缩，外面是xz压缩方式，里层是tar打包方式。 现在直接使用tar xvJf ***.tar.xz来解压 **tar xvJf *.tar.xz****]]></content>
+      <categories>
+        <category>Ubuntu</category>
+        <category>解决Ubuntu遇到的问题</category>
+      </categories>
+      <tags>
+        <tag>Ubuntu</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[解决Ubuntu16.04下不能读取exfat格式的u盘问题]]></title>
+    <url>%2F2019%2F07%2F29%2F%E8%A7%A3%E5%86%B3Ubuntu16.04%E4%B8%8B%E4%B8%8D%E8%83%BD%E8%AF%BB%E5%8F%96exfat%E6%A0%BC%E5%BC%8F%E7%9A%84u%E7%9B%98%E9%97%AE%E9%A2%98%2F</url>
+    <content type="text"><![CDATA[解决Ubuntu16.04下不能读取exfat格式的u盘问题 Ubuntu默认不支持exfat格式的U盘，只需要运行如下的命令： 1sudo apt-get install exfat-utils 安装完成后重启即可]]></content>
+      <categories>
+        <category>Ubuntu</category>
+        <category>解决Ubuntu遇到的问题</category>
+      </categories>
+      <tags>
+        <tag>Ubuntu</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[ubuntu为文件添加可执行权限]]></title>
+    <url>%2F2019%2F07%2F29%2Fubuntu%E4%B8%BA%E6%96%87%E4%BB%B6%E6%B7%BB%E5%8A%A0%E5%8F%AF%E6%89%A7%E8%A1%8C%E6%9D%83%E9%99%90%2F</url>
+    <content type="text"><![CDATA[ubuntu为文件添加可执行权限 chmod +x 和chmod a+x 是一样的，一般没有明确要求，可以就用chmod +x 为一个文件添加可执行权限 chmod +x filename 为一个文件夹下的所有文件添加可执行权限 chmod +x *]]></content>
+      <categories>
+        <category>Ubuntu</category>
+        <category>Ubuntu指令</category>
+      </categories>
+      <tags>
+        <tag>Ubuntu</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Ubuntu 16.04解决打开chrome出现 输入密码以解锁您的登录密钥环]]></title>
     <url>%2F2019%2F07%2F29%2F%E8%A7%A3%E5%86%B3%E6%89%93%E5%BC%80chrome%E5%87%BA%E7%8E%B0%20%E8%BE%93%E5%85%A5%E5%AF%86%E7%A0%81%E4%BB%A5%E8%A7%A3%E9%94%81%E6%82%A8%E7%9A%84%E7%99%BB%E5%BD%95%E5%AF%86%E9%92%A5%E7%8E%AF%2F</url>
     <content type="text"><![CDATA[解决打开chrome出现 输入密码以解锁您的登录密钥环 测试机型：thinkpad X1 extreme系统环境：ubuntu16.04 LTS问题：打开chrome，弹出提示框，显示需要输入密码以解锁您的登录 （图为网上查找，具体跟实际没有区别） 解决方法一 打开终端，查找login.keyring 进入路径找到文件login.keyring,删除密钥文件 重新打开chrome，提示重新输入新的密码 解决方法二 打开终端，输入seahorse,打开管理密码环的软件 在密码区有有一个“登录”的密钥环，右键点击删除 重新打开chrome，提示重新输入新的密钥]]></content>
@@ -49,7 +288,7 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[ubuntu删除非空文件夹命令]]></title>
+    <title><![CDATA[Ubuntu分区引问题导]]></title>
     <url>%2F2019%2F07%2F29%2FUbuntu%E5%88%86%E5%8C%BA%E5%BC%95%E9%97%AE%E9%A2%98%E5%AF%BC%2F</url>
     <content type="text"><![CDATA[Ubuntu分区引问题导 环境：Ubuntu16.04 LTS 硬件：ThinkPad X1 Extreme 问题：当安装Ubuntu系统，到分区硬盘容量，划分EFI区间，启动引导选择没有出现EFI分区（下图中启动引导选项里面显示出现EFI分区选择） 解决一：通过BIOS选择进入WinPe系统里面，选择硬盘，点击快速分区，选择重建MBR和创建ESP和MSR分区这两个选项。等操作完成重启系统重新进行Ubuntu系统安装，进行到硬盘分区的时候，按原来操作划分，注意需要重新划分列表，选择硬盘，点击New partition Table,在重新选择划分硬盘区域，选择启动引导的时候就会出现EFI分区。]]></content>
       <categories>
@@ -189,8 +428,8 @@
         <category>Ubuntu指令</category>
       </categories>
       <tags>
-        <tag>Linux</tag>
         <tag>Ubuntu</tag>
+        <tag>Linux</tag>
       </tags>
   </entry>
   <entry>
@@ -302,7 +541,7 @@
     <url>%2F2019%2F07%2F23%2Fshell%E5%91%BD%E4%BB%A4%E7%B3%BB%E5%88%97--%E6%95%B0%E6%8D%AE%E7%BB%9F%E8%AE%A1%2F</url>
     <content type="text"><![CDATA[shell命令系列–数据统计 1.目的从使用场景上，介绍常用shell命令，进行数据统计的用法，命令偏小白，熟悉Linux环境的同学可以进行跳过或者快速看一遍即可，以下命令中只简单描述数据分析过程中，常用命令使用方法，而不会对命令本身做细致解释。shell命令用法很多，有的会很复杂，难以解释清楚，需要用到时候，可Google寻找解决 2.学习环境Ubuntu 16.04LTS 3.练习数据可在本地桌面创建练习数据，如本人在路径： cd /home/litiangu/Desktop/ 进入到桌面后，创建一个文本数据，里面内容如下，共13行 12345678910111213学校,sex,age,city北大,男,20,北京北大,男,21,北京北大,男,20,北京北大,男,21,北京北大,男,20,北京南大,男,21,北京南大,女,20,上海南大,女,21,上海南大,女,20,上海南大,女,21,上海南大,女,20,上海南大,女,21,上海 命令如下touch userprofile.csv #创建文本vim userprofile.csv #编辑内容cat userprofile.csv #查看整个文件内容 创建好练习数据后，进入到统计场景 4.统计场景 4.1 行数 命令模板： wc -l 文件位置 代码样例 wc -l /home/…/userproflie.csv #如果当前路径为创建文件所在，那么可以省去绝对路径 #为简单所见，省去绝对路径，如下： wc -l userproflie.csv 执行效果： 该文件共13行 4.2 过滤关键词 命令模板： grep &#39;过滤词‘ 文件位置 代码样例 grep ‘北京’ userproflie.csv 执行效果： 过滤出含有‘北京’的行 还可过滤其他，如下图 4.3 选取某列 命令模板： cut -d&#39;分隔符‘ -fm,n 文件位置 代码样例 cut -d’,’ -f1,4 userprofile.csv #分隔符是逗号","分割成4列 #m,n为选取列，如选取1 4两列 执行效果： 过滤出含有‘北京’的行 还可选取其他列，如下图 4.4 按某列进行排序 命令模板： sort -t&#39;分隔符&#39; -knr 文件位置 代码样例 *sort -t’,’ -k3r userprofile.csv * #分隔符是逗号”,”分割成4列#n为选取列，如选取第3列#r为倒排，降序排列，没有r就是升序排列 执行效果： 第3列降序排列,按照年龄从小到大排列 还可选取其他列，如下图 4.5 去重 命令模块： sort -u 文件路径 代码样例： sort -u userprofile.csv 执行效果： 4.6 场景组合 某文件行去重后行数 代码样例 sort -u userproflie.csv | wc -l # | 为管道符号，可以简单理解为把上一条命令执行后的结果输入到下一条命令 执行效果 文件按某列去重后排序 代码样例 cut -d’,’ -f3,4 userprofile.csv | sort -u | sort -t’,’ -k1r # | 为管道符号，可以简单理解为把上一条命令执行后的结果输入到下一条命令 #选取3,4列，去重后，按照年龄倒叙排列 执行效果]]></content>
       <categories>
-        <category>技术</category>
+        <category>shell指令</category>
       </categories>
       <tags>
         <tag>shell</tag>
