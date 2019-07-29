@@ -1,11 +1,192 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[linux终端快捷指令]]></title>
-    <url>%2F2019%2F07%2F29%2Flinux%E7%BB%88%E7%AB%AF%E5%BF%AB%E6%8D%B7%E6%8C%87%E4%BB%A4%2F</url>
-    <content type="text"><![CDATA[Ubuntu终端指令 Linux终端快捷指令 【移动光标】 Ctrl+A 标移到行首。它在多数文本编辑器和 Mozilla 的 URL 字段内可以使用。Ctrl+E 把光标移到行尾。它在多数文本编辑器和 Mozilla 的 URL 字段内都可使用。Alt+F 光标向前移动一个单词Alt+B **光标向后移动一个单词Ctrl+F 光标向前移动一个字符,相当与-&gt;Ctrl+B 光标向后移动一个字符,相当与&lt;–Esc+B** 移动到当前单词的开头Esc+F 移动到当前单词的结尾 【屏幕操作】CTRL+U 向上滚动半屏CTRL+D 向下滚动半屏**[Ctrl] + [l] **= 清屏。该快捷操作与在命令行键入 clear 作用相同。 【剪切、删除、粘贴】Ctrl+u 剪切命令行中光标所在处之前的所有字符（不包括自身）Ctrl+k 剪切命令行中光标所在处之后的所有字符（包括自身）[行尾]Ctrl+Y 粘贴刚才所删除的字符Ctrl+c 删除整行Ctrl+d 删除光标所在处字符 Ctrl+h 删除光标所在处前一个字符Ctrl+w 剪切光标所在处之前的一个词（以空格、标点等为分隔符） Alt+d 剪切光标之后的词 Esc+w 删除光标所在处之前的字符至其单词尾（以空格、标点等为分隔符） # 【字符编辑】Alt+u 把当前词转化为大写Alt+l 把当前词转化为小写Alt+c **把当前词汇变成首字符大写Ctrl+v 插入特殊字符,如Ctrl+v+Tab加入Tab字符键（输入控制字符 如Ctrl+v ,会输入M）**Esc+t 颠倒光标所在处及其相邻单词的位置Ctrl+t 颠倒光标所在处及其之前的字符位置，并将光标移动到下一个字符（ 交换光标前两个字符）Alt+t 交换当前与以前单词的位置Ctrl+(x u) 按住Ctrl的同时再先后按x和u，撤销刚才的操作 【命令历史】history 显示命令历史列表。在 shell 提示中键入它来显示你所键入的被编号的前 1000 个命令。要显示较短的命令历史，键入 history f之后，空一格，在键入一个数字。例如： history 20 。↑(Ctrl+p) 显示上一条命令 （你在当前目录下键入的命令历史）**↓(Ctrl+n) 显示下一条命令!! （执行）上一条命令ls !$ 执行命令ls，并以上一条命令的参数为其参数!num 执行命令历史列表的第num条命令!-n 倒数第N条历史命令!-n:p 打印上一条命令（不执行）!-n:gs/str1/str2/ – 将倒数第N条命令的str1替换为str2，并执行（若不加g,则仅替换第一个）!?string? 执行含有string字符串的最新命令Ctrl+r 然后输入若干字符，开始向上搜索包含该字符的命令，继续按Ctrl+r，搜索上一条匹配的命令[不能正常使用，与 挂起当前shell 冲突] Ctrl+s 与Ctrl+r类似,只是正向检索Alt+&lt; 历史列表第一项Alt+&gt; 历史列表最后一项** 【终端控制】Tab：命令行自动补全。使用 shell 提示时可使用这一命令。键入命令或文件名的前几个字符，然后按 [Tab] 键，它会自动补全命令或显示匹配你键入字符的所有命令。Ctrl+C 终止当前正在运行的程序。Ctrl+s 挂起当前shell **Ctrl+q 重新启用挂起的shell[Ctrl] + [d] = 从 shell 提示中注销（并关闭）。使用该快捷键，你就不必键入 exit 或 logout 。exit = 注销。在 shell 提示中键入它会注销当前的用户或根用户帐号。 [Ctrl] + [l] = 清屏幕。该快捷操作与在命令行键入 clear 作用相同。 clear = 清除 shell 提示屏幕。在命令行下键入它会清除所有这个 shell 提示屏幕中显示的数据。[Ctrl] + = 清除当前行。如果你在终端下工作，使用这一快捷操作可以清除从光标处到行首的字符。reset = 刷新 shell 提示屏幕。如果字符不清晰或乱码的话，在 shell 提示下键入这个命令会刷新屏幕。 【窗口或系统】[Ctrl] + [Alt] + [Backspace] *= *杀死你当前的 X 会话。杀死图形化桌面会话，把你返回到登录屏幕。如果正常退出步骤不起作用，你可以使用这种方法。（有时候在 X-Window里由于程序出错，使鼠标键盘都不起作用， 这时候不用着急， 因为在Linux下几乎不会像在Win 9x里那样恶性死机， 你只须键入Ctrl+Alt+BackSpace键就可以回到字符界面下了。） [Ctrl] + [Alt] + [Delete] *= *关机和重新引导 Red Hat Linux。关闭你当前的会话然后重新引导 OS。只有在正常关机步骤不起作用时才使用这种方法。 [Ctrl] + [Alt] + [Fn] = 切换屏幕。 [Ctrl] + [Alt] + 功能键之一会显示一个新屏幕。根据默认设置，从 [F1] 到 [F6] 是 shell 提示屏幕， [F7] 是图形化屏幕。 [Alt] + [Tab] = 在图形化桌面环境中切换任务。如果你同时打开了不止一个应用程序，你可以使用 [Alt] + [Tab] 来在打开的任务和应用程序间切换。]]></content>
+    <title><![CDATA[Ubuntu 16.04解决打开chrome出现 输入密码以解锁您的登录密钥环]]></title>
+    <url>%2F2019%2F07%2F29%2F%E8%A7%A3%E5%86%B3%E6%89%93%E5%BC%80chrome%E5%87%BA%E7%8E%B0%20%E8%BE%93%E5%85%A5%E5%AF%86%E7%A0%81%E4%BB%A5%E8%A7%A3%E9%94%81%E6%82%A8%E7%9A%84%E7%99%BB%E5%BD%95%E5%AF%86%E9%92%A5%E7%8E%AF%2F</url>
+    <content type="text"><![CDATA[解决打开chrome出现 输入密码以解锁您的登录密钥环 测试机型：thinkpad X1 extreme系统环境：ubuntu16.04 LTS问题：打开chrome，弹出提示框，显示需要输入密码以解锁您的登录 （图为网上查找，具体跟实际没有区别） 解决方法一 打开终端，查找login.keyring 进入路径找到文件login.keyring,删除密钥文件 重新打开chrome，提示重新输入新的密码 解决方法二 打开终端，输入seahorse,打开管理密码环的软件 在密码区有有一个“登录”的密钥环，右键点击删除 重新打开chrome，提示重新输入新的密钥]]></content>
       <categories>
         <category>Ubuntu</category>
+        <category>解决Ubuntu遇到的问题</category>
+      </categories>
+      <tags>
+        <tag>Ubuntu</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[ubuntu18.04安装unity桌面]]></title>
+    <url>%2F2019%2F07%2F29%2Fubuntu18.04%E5%AE%89%E8%A3%85unity%E6%A1%8C%E9%9D%A2%2F</url>
+    <content type="text"><![CDATA[ubuntu18.04安装unity桌面 安装unity桌面 终端输入 sudo apt updatesudo apt-get install ubuntu-unity-desktop 你被要求选择桌面管理器，如果你想使用gdm（那是你的Gnome）或lightdm（那是Unity），那么请注意后者，退出，重新登录，但一定要选择Unity作为您的桌面环境。 如果你是 从 Ubuntu 16.04/17.10 升级到 Ubuntu 18.04 并且登录界面被Gnome桌面环境的登录界面替换了,你可以通过运行以下命令来回复Unity登录界面. sudo dpkg-reconfigure lightdm Unity 桌面就这样安装完成了 查看Unity版本你可以使用 screenfetch 工具来查看Unity 桌面版本. sudo apt install screenfetchscreenfetch 当然你也可以使用以下命令来查看 unity –version 安装完Unity后你可以安装unity-tweak-tool sudo apt install unity-tweak-tool 从 Ubuntu 18.04卸载 GNOME 桌面卸载Gnome很简单 sudo apt remove gnome-shell –purge 从Ubuntu18.04安装gnome-tweaks sudo apt updatesudo apt-get install gnome-tweaksgnome-tweaks #启动工具]]></content>
+      <categories>
+        <category>Ubuntu</category>
+        <category>安装Ubuntu软件</category>
+      </categories>
+      <tags>
+        <tag>Ubuntu</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Ubuntu 16.04修改Home目录下的中文目录为英文]]></title>
+    <url>%2F2019%2F07%2F29%2FUbuntu%2016.04%E4%BF%AE%E6%94%B9Home%E7%9B%AE%E5%BD%95%E4%B8%8B%E7%9A%84%E4%B8%AD%E6%96%87%E7%9B%AE%E5%BD%95%E4%B8%BA%E8%8B%B1%E6%96%87%2F</url>
+    <content type="text"><![CDATA[Ubuntu 16.04修改Home目录下的中文目录为英文 Ctrl+Alt+T （默认终端快捷键）打开终端，输入一下命令：首先更改系统语言环境为英文export LANG=en_US然后更改设置xdg-user-dirs-gtk-update 此时会弹出界面，选择带有“update”字样的选项或者是“更新名称” 接着更改回中文语言环境export LANG=zh_CN.UTF-8再次执行xdg-user-dirs-gtk-update此时再次弹出界面，选择“保留旧的名称”然后，OK！]]></content>
+      <categories>
+        <category>Ubuntu</category>
+        <category>解决Ubuntu遇到的问题</category>
+      </categories>
+      <tags>
+        <tag>Ubuntu</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Ubuntu16.04息屏卡死问题]]></title>
+    <url>%2F2019%2F07%2F29%2FUbuntu16.04%E6%81%AF%E5%B1%8F%E5%8D%A1%E6%AD%BB%E9%97%AE%E9%A2%98%2F</url>
+    <content type="text"><![CDATA[Ubuntu16.04息屏卡死问题 环境：Ubuntu16.04.05LTS 硬件配置：thinkpad x1 extreme 显卡1050ti 进入终端–更新源 sudo apt-get update sudo apt-get upgrade 输入命令更新显卡驱动 sudo apt-get install nvidia-384 nvidia-modprobe 重启，查看驱动信息 rebootnvidia-smi]]></content>
+      <categories>
+        <category>Ubuntu</category>
+        <category>解决Ubuntu遇到的问题</category>
+      </categories>
+      <tags>
+        <tag>Ubuntu</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[ubuntu删除非空文件夹命令]]></title>
+    <url>%2F2019%2F07%2F29%2FUbuntu%E5%88%86%E5%8C%BA%E5%BC%95%E9%97%AE%E9%A2%98%E5%AF%BC%2F</url>
+    <content type="text"><![CDATA[Ubuntu分区引问题导 环境：Ubuntu16.04 LTS 硬件：ThinkPad X1 Extreme 问题：当安装Ubuntu系统，到分区硬盘容量，划分EFI区间，启动引导选择没有出现EFI分区（下图中启动引导选项里面显示出现EFI分区选择） 解决一：通过BIOS选择进入WinPe系统里面，选择硬盘，点击快速分区，选择重建MBR和创建ESP和MSR分区这两个选项。等操作完成重启系统重新进行Ubuntu系统安装，进行到硬盘分区的时候，按原来操作划分，注意需要重新划分列表，选择硬盘，点击New partition Table,在重新选择划分硬盘区域，选择启动引导的时候就会出现EFI分区。]]></content>
+      <categories>
+        <category>Ubuntu</category>
+        <category>安装Ubuntu系统、驱动</category>
+      </categories>
+      <tags>
+        <tag>Ubuntu</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[ubuntu查看已安装所有软件包]]></title>
+    <url>%2F2019%2F07%2F29%2Fubuntu%E6%9F%A5%E7%9C%8B%E5%B7%B2%E5%AE%89%E8%A3%85%E6%89%80%E6%9C%89%E8%BD%AF%E4%BB%B6%E5%8C%85%2F</url>
+    <content type="text"><![CDATA[ubuntu查看已安装所有软件包 dpkg -l –列出当前系统中所有的包.可以和参数less一起使用在分屏查看. (类似于rpm -qa)]]></content>
+      <categories>
+        <category>Ubuntu</category>
+        <category>Ubuntu指令</category>
+      </categories>
+      <tags>
+        <tag>Ubuntu</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[ubuntu删除非空文件夹命令]]></title>
+    <url>%2F2019%2F07%2F29%2Fubuntu%E5%88%A0%E9%99%A4%E9%9D%9E%E7%A9%BA%E6%96%87%E4%BB%B6%E5%A4%B9%2F</url>
+    <content type="text"><![CDATA[ubuntu删除非空文件夹 rm [选项] 文件 -f, –force 强力删除，不要求确认 -i 每删除一个文件或进入一个子目录都要求确认 -I 在删除超过三个文件或者递归删除前要求确认 -r, -R 递归删除子目录 -d, –dir 删除空目录 -v, –verbose 显示删除结果 常用如下几个：rm -d 目录名 #删除一个空目录rmdir 目录名 #删除一个空目录rm -r 目录名 #删除一个非空目录rm 文件名 #删除文件在终端进到那个文件夹，然后执行：sudo rm -rf 文件夹名如果还是不行，就用sudo chmod 777 文件夹名sudo rm -rf 文件夹名 ubuntu删除空文件夹 rmdir 目录名 ubuntu删除非空文件夹 rm -rf 目录名 参数-f表示force,用了这个参数就不会询问你是否要删除了。]]></content>
+      <categories>
+        <category>Ubuntu</category>
+        <category>Ubuntu指令</category>
+      </categories>
+      <tags>
+        <tag>Ubuntu</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[解决zoom在ubuntu画面太小]]></title>
+    <url>%2F2019%2F07%2F29%2F%E8%A7%A3%E5%86%B3zoom%E5%9C%A8ubuntu%E7%94%BB%E9%9D%A2%E5%A4%AA%E5%B0%8F%2F</url>
+    <content type="text"><![CDATA[解决zoom在ubuntu画面太小 测试机型：Thinkpad X1 extreme 系统环境：ubuntu16.04LTS问题：zoom for linux版本安装，启动zoom，登入界面非常小，很难看清里面UI界面 解决方法 打开终端，进入～/.config/ 找到zoomus.conf 用vi\vim\nano来打开配置文件，这里使用vim编辑 进入到配置文件里面后，向里面添加该行scaleFactor=2 添加完后保存退下，重启zoom客户端 成功恢复正常zoom界面，ok]]></content>
+      <categories>
+        <category>Ubuntu</category>
+        <category>解决Ubuntu遇到的问题</category>
+      </categories>
+      <tags>
+        <tag>Ubuntu</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[安装zoom for Linux]]></title>
+    <url>%2F2019%2F07%2F29%2F%E5%AE%89%E8%A3%85zoom%2F</url>
+    <content type="text"><![CDATA[安装zoom 官网下载Linux zoom客户端 下载地址：https://zoom.us/download?os=linux 安装zoom 客户端 终端输入 1234sudo apt-get install libxcb-xtest0 #安装依赖环境sudo dpkg -i zoom_amd64.deb #安装客户端which zoom #查看安装路径sudo zoom #启动zoom 1、2、3、4、 若第一步:sudo apt-get install libxcb-xtest0 安装报错，则跳过这一步 12345sudo apt-get install libxcb-xtest0 #安装报错，跳过此步骤sudo dpkg -i zoom_amd64.deb #无法安装，提示需要依赖环境sudo apt-get install -f #根据安装包安装依赖环境sudo dpkg -i zoom_amd64.deb #再安装一遍sudo zoom #启动zoom]]></content>
+      <categories>
+        <category>Ubuntu</category>
+        <category>安装Ubuntu软件</category>
+      </categories>
+      <tags>
+        <tag>Ubuntu</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[安装双系统导致时间不相同]]></title>
+    <url>%2F2019%2F07%2F29%2F%E6%97%B6%E9%97%B4%E4%B8%8D%E5%90%8C%E6%AD%A5%E9%97%AE%E9%A2%98%2F</url>
+    <content type="text"><![CDATA[时间不同步问题 Ubuntu 16.04 和 windows 时间不同步的问题每次进入Ubuntu 16.04后再回到windows，就会发现时间对不上，少了8小时，这是因为Ubuntu 16.04的时区设置不正确造成的，解决方法是执行下面的命令： 1sudo timedatectl set-local-rtc 1]]></content>
+      <categories>
+        <category>Ubuntu</category>
+        <category>解决Ubuntu遇到的问题</category>
+      </categories>
+      <tags>
+        <tag>Ubuntu</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[开机后Ubuntu系统无显示画面，黑屏]]></title>
+    <url>%2F2019%2F07%2F29%2F%E6%97%A0%E6%B3%95%E6%98%BE%E7%A4%BA%E5%B1%8F%E5%B9%95%E5%9B%BE%E5%BD%A2%2F</url>
+    <content type="text"><![CDATA[无法显示屏幕图形 情景一翻译：系统正在低图形模式下运行您的屏幕图形卡，并且无法正确检测输入设备设置，您需要检查这些 分析：电脑默认显卡模式为混合模式，以核显驱动图形。在Ubuntu系统下，需要在BIOS里面设置显卡模式为独立显卡模式，按F10保存重启，进入Ubuntu就能看到画面了]]></content>
+      <categories>
+        <category>Ubuntu</category>
+        <category>解决Ubuntu遇到的问题</category>
+      </categories>
+      <tags>
+        <tag>Ubuntu</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[安装Ubuntu16.04驱动]]></title>
+    <url>%2F2019%2F07%2F29%2F%E6%9B%B4%E6%96%B0nVidia%E9%A9%B1%E5%8A%A8%2F</url>
+    <content type="text"><![CDATA[更新nVidia驱动 卸载系统里的Nvidia低版本显卡驱动 sudo apt-get purge nvidia* 把显卡驱动加入PPA sudo add-apt-repository ppa:graphics-drivers/ppasudo apt-get update 查找显卡驱动最新的版本号,查找并安装最新驱动 sudo apt-cache search nvidia* 返回如下结果： 或可使用终端命令查看Ubuntu推荐的驱动版本： ubuntu-drivers devices 采用apt-get命令在终端安装： sudo apt-get install nvidia-418 nvidia-settings nvidia-modprobe 重启系统并验证 在终端输入以下命令行： lsmod | grep nvidia 如果没有输出，则安装失败。成功安装会有如下类似结果： 输入命令行，查看Ubuntu自带的nouveau驱动是否运行： lsmod | grep nouveau 如果终端没有内容输出，则显卡驱动的安装成功 查看驱动信息 nvidia-smi （可选）停止当前版本的本地更新 sudo apt-mark hold nvidia-xxx]]></content>
+      <categories>
+        <category>Ubuntu</category>
+        <category>安装Ubuntu、驱动</category>
+      </categories>
+      <tags>
+        <tag>Ubuntu</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[安装Ubuntu16.04系统]]></title>
+    <url>%2F2019%2F07%2F29%2F%E5%AE%89%E8%A3%85Ubuntu16.04%E7%B3%BB%E7%BB%9F%2F</url>
+    <content type="text"><![CDATA[安装Ubuntu16.04系统 Thinkpad X1 Extreme 安装Ubuntu 硬件配置：ThinkPad X1 Extreme GTX1050TI 一、升级BIOS步骤首先在安装Ubuntu16.04系统前，在Windows系统下升级BIOS版本，否则会在安装过程中出现黑屏、卡死现象，会造成主板损坏现象； ###a、打开cmd，输入systeminfo,查看BIOS版本信息，（下图已经安装了最新的版本，根据自己电脑实际情况查看） b、去Thinkpad 官网下载最新BIOS驱动，链接 c、根据电脑底部上的条码选择，后面的字符串选择TYPE 前4 位，此例中为20MF（根据自己电脑实际情况查看） d、在列表中，下载BIOS升级驱动（Windows 10 64-bit） e、双击安装BIOS驱动，按照提示一路安装下去；ThinkPad X1 Extreme 的Bios 升级时间比较长，中间会重启黑屏几分钟，一定要耐心等待，中间不要强制关机或拔电源，直到升级成功，重启电脑,按F1进入BIOS可以看到版本信息。本例中为1.19，2019 年1 月31 日更新，此时为最新的版本。 二、修改BIOS设置，在安装Ubuntu系统之前 a、Security 中的Secure Boot 禁用（Disabled） b、Startup 中的UEFI/LegacyBoot 选 UEFI Only c、Display 中显卡选独立显卡模式（Discrete Graphics） d、Restart中把OS Optimized Defaults禁用（Disabled） e、按F10 保存退出，插入Ubuntu 安装U 盘，重启后按F12，选择U 盘安装Ubuntu 三、安装Ubuntu系统，一定要通电安装 四、进入Ubuntu系统后，选择安装显卡驱动 a、在设置里面把屏幕设置永不息屏和锁屏，一旦电脑在安装显卡驱动过程中息屏或者黑屏，就会卡死需要重新启动。 b、打开终端，输入sudo apt update，更新源 查看可以安装的显卡驱动，ubuntu-drivers devices c、安装nvidia-384发行版，sudo apt install nvidia-384 nvidia-modprobe _ #提示安装，直接按Y确认_ 五、更新内核，等待安装完成 sudo apt update sudo apt upgrade 六、重启，查看显卡信息nvidia-smi reboot nvidia-smi]]></content>
+      <categories>
+        <category>Ubuntu</category>
+        <category>安装Ubuntu、驱动</category>
+      </categories>
+      <tags>
+        <tag>Ubuntu</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[常用命令]]></title>
+    <url>%2F2019%2F07%2F29%2F%E5%B8%B8%E8%A7%81%E5%91%BD%E4%BB%A4%2F</url>
+    <content type="text"><![CDATA[ubuntu经常使用到的命令 ps aux **—列出系统上运行的所有进程的详细信息。 这包括用户、进程IDPID**和过程的名称。 使用此可查看进程列表中并在必要时您可以终止不必要的或已停止进程。 kill pid-PID是数字的引用有问题的进程。 您应获取从命令(如ps auxPID。 如果拒绝中止的进程,您也可以指定kill-9PID应终止进程以任何方式。 丢失自己的目录中? 键入pwd打印工作目录。 要计算您的磁盘空间吗? df-h可向您提供快速的图。要计算某个文件夹或文件的大小? du-cksh target_name将执行完全一致的。 要计算当前文件夹的大小? du-cksh。想要将文件标记为可执行文件? chmod+x filename将执行该操作。 删除桌面上的Amazon链接 sudo apt-get remove unity-webapps-commonsudo apt remove unity-webapps*sudo apt remove purge unity 关闭系统更新，修改配置文件,所有值改为“0” sudo gedit /etc/apt/apt.conf.d/10periodic 安装.deb 安装命令sudo dpkg -i &lt;安装包名称&gt;如果有依赖故障，用以下命令修复故障sudo apt-get install -f 卸载自动的libreoffice sudo apt-get remove –purge libreoffice* apt-get remove 软件包名称： 删除已安装的软件包（保留配置文件）。 apt-get –purge remove 软件包名称： 删除已安装包（不保留配置文件) apt-get autoremove: 删除为了满足其他软件包的依赖而安装的，但现在不再需要的软件包。 > sudo apt-get clean # 删除安装了的软件包的安装包（如果你确定这些安装包不会再用）。 删除包缓存中的所有包。 sudo apt-get autoremove # 删除为了满足其他软件包的依赖而安装的，系统会自动卸载这些不再需要的软件包]]></content>
+      <categories>
+        <category>Ubuntu</category>
+        <category>Ubuntu指令</category>
+      </categories>
+      <tags>
+        <tag>Ubuntu</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Ubuntu安装deepin-wine]]></title>
+    <url>%2F2019%2F07%2F29%2FUbuntu%E5%AE%89%E8%A3%85deepin-wine%2F</url>
+    <content type="text"><![CDATA[安装deepin-wine 微信 和搜狗输入法 直接查看链接https://github.com/wszqkzqk/deepin-wine-ubuntu可安装deepin-wine 微信 和搜狗输入法]]></content>
+      <categories>
+        <category>Ubuntu</category>
+        <category>安装Ubuntu软件</category>
+      </categories>
+      <tags>
+        <tag>Ubuntu</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[linux终端快捷指令]]></title>
+    <url>%2F2019%2F07%2F29%2Flinux%E7%BB%88%E7%AB%AF%E5%BF%AB%E6%8D%B7%E6%8C%87%E4%BB%A4%2F</url>
+    <content type="text"><![CDATA[Ubuntu终端指令 【移动光标】Ctrl+A 标移到行首。它在多数文本编辑器和 Mozilla 的 URL 字段内可以使用。 Ctrl+E 把光标移到行尾。它在多数文本编辑器和 Mozilla 的 URL 字段内都可使用。 Alt+F 光标向前移动一个单词 Alt+B光标向后移动一个单词 Ctrl+F光标向前移动一个字符,相当与-&gt; Ctrl+B光标向后移动一个字符,相当与&lt;– Esc+B 移动到当前单词的开头 Esc+F 移动到当前单词的结尾 【屏幕操作】CTRL+U 向上滚动半屏 CTRL+D 向下滚动半屏 [Ctrl] + [l]= 清屏。该快捷操作与在命令行键入 clear 作用相同。 【剪切、删除、粘贴】Ctrl+u 剪切命令行中光标所在处之前的所有字符（不包括自身） Ctrl+k 剪切命令行中光标所在处之后的所有字符（包括自身）[行尾] Ctrl+Y 粘贴刚才所删除的字符 Ctrl+c 删除整行 Ctrl+d 删除光标所在处字符 Ctrl+h 删除光标所在处前一个字符 Ctrl+w 剪切光标所在处之前的一个词（以空格、标点等为分隔符） Alt+d 剪切光标之后的词 Esc+w 删除光标所在处之前的字符至其单词尾（以空格、标点等为分隔符） 【字符编辑】Alt+u 把当前词转化为大写 Alt+l 把当前词转化为小写 *Alt+c *把当前词汇变成首字符大写 Ctrl+v 插入特殊字符,如Ctrl+v+Tab加入Tab字符键（输入控制字符 如Ctrl+v ,会输入M） Esc+t 颠倒光标所在处及其相邻单词的位置 Ctrl+t 颠倒光标所在处及其之前的字符位置，并将光标移动到下一个字符（ 交换光标前两个字符） Alt+t 交换当前与以前单词的位置 Ctrl+(x u) 按住Ctrl的同时再先后按x和u，撤销刚才的操作 【命令历史】history 显示命令历史列表。在 shell 提示中键入它来显示你所键入的被编号的前 1000 个命令。要显示较短的命令历史，键入 history f之后，空一格，在键入一个数字。例如： history 20 。 ↑(Ctrl+p) 显示上一条命令 （你在当前目录下键入的命令历史) ↓(Ctrl+n) 显示下一条命令 !! （执行）上一条命令 ls !$ 执行命令ls，并以上一条命令的参数为其参数 !num 执行命令历史列表的第num条命令 !-n 倒数第N条历史命令 !-n:p 打印上一条命令（不执行） !-n:gs/str1/str2/ – 将倒数第N条命令的str1替换为str2，并执行（若不加g,则仅替换第一个） !?string? 执行含有string字符串的最新命令 Ctrl+r 然后输入若干字符，开始向上搜索包含该字符的命令，继续按Ctrl+r，搜索上一条匹配的命令 [不能正常使用，与 挂起当前shell 冲突] Ctrl+s 与Ctrl+r类似,只是正向检索 Alt+&lt; 历史列表第一项 Alt+&gt; 历史列表最后一项 【终端控制】Tab：命令行自动补全。使用 shell 提示时可使用这一命令。键入命令或文件名的前几个字符，然后按 [Tab] 键，它会自动补全命令或显示匹配你键入字符的所有命令。 Ctrl+C 终止当前正在运行的程序。 Ctrl+s 挂起当前shell Ctrl+q 重新启用挂起的shell [Ctrl] + [d] = 从 shell 提示中注销（并关闭）。使用该快捷键，你就不必键入 exit 或 logout 。 exit = 注销。在 shell 提示中键入它会注销当前的用户或根用户帐号。 [Ctrl] + [l] = 清屏幕。该快捷操作与在命令行键入 clear 作用相同。 clear = 清除 shell 提示屏幕。在命令行下键入它会清除所有这个 shell 提示屏幕中显示的数据。 [Ctrl] + = 清除当前行。如果你在终端下工作，使用这一快捷操作可以清除从光标处到行首的字符。 reset = 刷新 shell 提示屏幕。如果字符不清晰或乱码的话，在 shell 提示下键入这个命令会刷新屏幕。 【窗口或系统】[Ctrl] + [Alt] + [Backspace] *= *杀死你当前的 X 会话。杀死图形化桌面会话，把你返回到登录屏幕。如果正常退出步骤不起作用，你可以使用这种方法。（有时候在 X-Window里由于程序出错，使鼠标键盘都不起作用， 这时候不用着急， 因为在Linux下几乎不会像在Win 9x里那样恶性死机， 你只须键入Ctrl+Alt+BackSpace键就可以回到字符界面下了。） [Ctrl] + [Alt] + [Delete] *= *关机和重新引导 Red Hat Linux。关闭你当前的会话然后重新引导 OS。只有在正常关机步骤不起作用时才使用这种方法。 [Ctrl] + [Alt] + [Fn] = 切换屏幕。 [Ctrl] + [Alt] + 功能键之一会显示一个新屏幕。根据默认设置，从 [F1] 到 [F6] 是 shell 提示屏幕， [F7] 是图形化屏幕。 [Alt] + [Tab] = 在图形化桌面环境中切换任务。如果你同时打开了不止一个应用程序，你可以使用 [Alt] + [Tab] 来在打开的任务和应用程序间切换。]]></content>
+      <categories>
+        <category>Ubuntu</category>
+        <category>Ubuntu指令</category>
       </categories>
       <tags>
         <tag>Linux</tag>
