@@ -1,19 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[解决git下载很慢的问题]]></title>
+    <url>%2F2019%2F07%2F29%2F%E8%A7%A3%E5%86%B3git%E4%B8%8B%E8%BD%BD%E5%BE%88%E6%85%A2%E7%9A%84%E9%97%AE%E9%A2%98%2F</url>
+    <content type="text"><![CDATA[通过镜像下载：https://npm.taobao.org/mirrors/git-for-windows/]]></content>
+      <tags>
+        <tag>git</tag>
+        <tag>技术</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[git配置用户名 for Linux]]></title>
     <url>%2F2019%2F07%2F29%2FGit%20%E9%85%8D%E7%BD%AE%E7%94%A8%E6%88%B7%E5%90%8D%2F</url>
     <content type="text"><![CDATA[Git 配置用户名 Git配置用户名、邮箱、密码 配置用户名：usernamegit config –global user.name username 配置邮箱：user@emailgit config –global user.email user@email 配置密码git config –global credential.helper store 该命令会记住密码，执行一次 git pull 或 git push 等需要输入密码的命令，输入一次密码。 查看配置git config –list]]></content>
       <tags>
         <tag>git</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[git配置用户名 for Linux]]></title>
-    <url>%2F2019%2F07%2F29%2F%E8%A7%A3%E5%86%B3git%E4%B8%8B%E8%BD%BD%E5%BE%88%E6%85%A2%E7%9A%84%E9%97%AE%E9%A2%98%2F</url>
-    <content type="text"><![CDATA[在下载git应用时候下载速度很慢，可以用国内镜像下载 解决git下载很慢的问题通过镜像下载：https://npm.taobao.org/mirrors/git-for-windows/]]></content>
-      <tags>
-        <tag>git</tag>
+        <tag>技术</tag>
       </tags>
   </entry>
   <entry>
@@ -22,6 +24,7 @@
     <content type="text"><![CDATA[在Ubuntu16.04上安装git 安装git_ git必不可少，不得不装_（1）apt-get install git（不行到话，先update）git –version出现版本号表示成功了 （2）配置变量： git config –global user.name “Your Name” git config –global user.email “youremail@domain.com“ （3）生成公钥 ssh-keygen -C ‘you email ‘ -t rsa， 生成到公钥在用户目录下 修改用户邮箱与用户名 在自己提交代码到远程仓库后,如果显示自己的英文名,势必会给团队其他不熟悉你的英文名的同事带来困扰,尤其是出现一些bug的情况下,不能及时与你本人沟通,因此需要修改成自己的中文名cat ~/.gitconfig输入如下全局改变用户名 git config –global user.name ‘xxx’ #xxx为你输入的名字 修改后可以看到自己的git名字变成中文名了 修改成功,同时还可以修改自己的email,同上命令 git config –global user.email ‘XXXX@xx.xx’ #输入你要的邮箱 查看配置文件的位置位置1:/etc/gitconfig 系统级别的配置,适用于所有的用户和所有的库,可以使用 $git config –system 来指定和修改,存储在Git安装目录下位置2:~/.gitconfig** 用户级别的配置,适用于当前登录的用户,可以使用$git config –gloabal来指定和修改,存储在C:\Documents and Settings$USER下位置3:.git/config** 库级别的配置,适用于某个具体的库,可以使用$git config来指定和修改,存储在具体的库隐藏的.git文件夹下 说明:Git会优先使用库级别的配置,再然后是global级别的配置,最后是system级别的配置. 解决每次拉取代码都需要用户名密码 执行git config –global credential.helper store，在~/.gitconfig目录下会多出一个文件，这里会记录你的密码和帐号； 再执行git pull 输入一次正确的帐号密码之后就不用再输入了。 linux中清除git记住密码的方法发现在当前用户的根目录下，有一个.git-credentials文件，git的用户名和密码明文存储在其中，如下图所示：git官网（https://git-scm.com/book/zh/v2/Git-%E5%B7%A5%E5%85%B7-%E5%87%AD%E8%AF%81%E5%AD%98%E5%82%A8）介绍凭证存储的： git config –system –unset credential.helper 执行该命令，然后多次git pull，发现还是记住了密码，并生成了.git-credentials文件。查看项目本身的.git文件夹里能不能找到啥线索，发现config文件配置如下：会不会是最后helper参数的值为store引起的？于是直接把最后一行删除，再重新git pull，发现密码不再记住，而且也不再生成.git-credentials文件，终于搞定！]]></content>
       <tags>
         <tag>git</tag>
+        <tag>技术</tag>
       </tags>
   </entry>
   <entry>
@@ -30,6 +33,7 @@
     <content type="text"><![CDATA[git官方操作文档 查看链接：https://git-scm.com/book/zh/v2]]></content>
       <tags>
         <tag>git</tag>
+        <tag>技术</tag>
       </tags>
   </entry>
   <entry>
@@ -38,6 +42,7 @@
     <content type="text"><![CDATA[在网上收集到此表，可供查看 Git命令]]></content>
       <tags>
         <tag>git</tag>
+        <tag>技术</tag>
       </tags>
   </entry>
   <entry>
