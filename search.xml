@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[hexo创建文章出现bash: hexo: command not found]]></title>
+    <title><![CDATA[hexo创建文章出现bash-hexo-command-no-found]]></title>
     <url>%2F2019%2F07%2F30%2Fhexo%E5%88%9B%E5%BB%BA%E6%96%87%E7%AB%A0%E5%87%BA%E7%8E%B0bash-hexo-command-not-found%2F</url>
     <content type="text"><![CDATA[在创建新文章时，出现“bash: hexo: command not found”提示。 解决办法找到F:\blog\node_modules.bin（即hexo目录里面node_modules.bin的 路径），将此目录添加到环境变量中。 为了保险一点，建议在系统变量中的path中添加。然后需要关闭Git Bash窗口，重新打开即可。 记住，一定要关闭，并重新打开命令窗口，否则配置不会生效。]]></content>
+      <categories>
+        <category>hexo</category>
+      </categories>
       <tags>
         <tag>hexo</tag>
       </tags>
@@ -12,6 +15,9 @@
     <title><![CDATA[完全删除MySQL（win10）]]></title>
     <url>%2F2019%2F07%2F30%2F%E5%AE%8C%E5%85%A8%E5%88%A0%E9%99%A4MySQL%2F</url>
     <content type="text"><![CDATA[在安装软件的时候，一定要确保电脑上之前没有安装过该软件，不论何种版本，要是之前有安装过，需要重新安装，首先需要卸载掉之前安装的该软件。 完全删除MySQL的方法（Ｗindows 10）： 卸载MySQL软件；安装目录下将该软件删除，默认的安装目录为（C:\Program Files (x86)\MySQL）删掉配置文件，默认存储目录为（C:\ProgramData\MySQL）删掉之前配置好的环境变量删掉注册表中的信息，注册表中信息如下，要是再该目录下没有相应的文件，则不需要再做删除： HKEY_LOCAL_MACHINE/SYSTEM/ControlSet001/Services/Eventlog/Application/MySQLHKEY_LOCAL_MACHINE/SYSTEM/ControlSet002/Services/Eventlog/Application/MySQLHKEY_LOCAL_MACHINE/SYSTEM/CurrentControlSet/Services/Eventlog/Application/MySQL]]></content>
+      <categories>
+        <category>MySQL</category>
+      </categories>
       <tags>
         <tag>Windows</tag>
         <tag>MySQL</tag>
