@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[安装uget]]></title>
+    <url>%2F2019%2F07%2F30%2Fuget%2F</url>
+    <content type="text"><![CDATA[uget 参考官网链接提示如何安装 ，链接 (1) 首先安装uGet: 123sudo add-apt-repository ppa:plushuang-tw/uget-stablesudo apt-get updatesudo apt-get install uget (2) 接着安装arias2: 123sudo add-apt-repository ppa:t-tujikawa/ppasudo apt-get updatesudo apt-get install aria2 安装参考链接3、配置uGet默认下载插件为aria2编辑-&gt;设置-&gt;插件 第4步与第5步还未确认是那一步最合理，等待后续测试 4、设置uGet为Chrome的默认下载插件安装uget-chrome-wrapper 123sudo add-apt-repository ppa:slgobinath/uget-chrome-wrappersudo apt updatesudo apt install uget-chrome-wrapper 5、安装uget-integrator #这一步测试成功 123sudo add-apt-repository ppa:uget-team/ppasudo apt updatesudo apt install uget-integrator 6、安装Chrome插件：https://chrome.google.com/webstore/detail/uget-integration/efjgjleilhflffpbnkaofpmdnajdpepi?hl=zh-CN 添加uGet扩展后，谷歌浏览器右上角即可显示uGet图标。重启谷歌浏览器，只要点击下载链接，就会自动弹出uGet下载界面、自动添加下载任务。当然，如果对于某些链接，仍要使用谷歌浏览器下载，可以用鼠标右键“链接另存为”。]]></content>
+      <categories>
+        <category>Ubuntu</category>
+        <category>安装Ubuntu软件</category>
+      </categories>
+      <tags>
+        <tag>Ubuntu</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[本地网站搭建]]></title>
     <url>%2F2019%2F07%2F29%2F%E6%9C%AC%E5%9C%B0%E7%BD%91%E7%AB%99%E6%90%AD%E5%BB%BA%2F</url>
     <content type="text"><![CDATA[本地网站搭建 参考链接：https://www.jianshu.com/p/7a6193482ca2 Bookstack, 书本形式的笔记体系。开源，美观。需要运行服务。 官网：https://www.bookstackapp.com/ 实例：https://demo.bookstackapp.com/]]></content>
